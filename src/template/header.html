@@ -1,0 +1,11 @@
+<header>
+  <ul>
+    <li @@if (context.active == 'enterpriseEntry') {class="active"} ><a href="./enterpriseEntry.html">企业入驻</a></li>
+    <li @@if (context.active == 'fashionActivities') {class="active"} ><a href="./fashionActivities.html">时尚活动</a></li>
+    <li @@if (context.active == 'fashionEducation') {class="active"} ><a href="./fashionEducation.html">时尚教育</a></li>
+    <li @@if (context.active == 'home') {class="active"} type="logo"><a href="./index.html"><img src="@@webRoot/images/logo.svg" alt=""></a></li>
+    <li @@if (context.active == 'characteristicService') {class="active"} ><a href="./characteristicService.html">特色服务</a></li>
+    <li @@if (context.active == 'designMatch') {class="active"} ><a href="./designMatch.html">设计大赛</a></li>
+    <li @@if (context.active == 'aboutUs') {class="active"} ><a href="./aboutUs.html">关于我们</a></li>
+  </ul>
+</header>

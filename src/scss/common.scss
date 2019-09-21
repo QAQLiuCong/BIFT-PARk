@@ -1,0 +1,128 @@
+@import "_macro";
+
+@font-face {
+  font-family: SourceHanSans;
+  src: url("../font/SourceHanSans-Light.otf");
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 12px;
+  font-family: SourceHanSans, -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+    PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #333;
+  background-color: #f4f5f5;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+article,
+aside,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+}
+button {
+  list-style: 1;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button.disabled,
+button.disabled:hover {
+  background-color: #d2d2d2;
+  cursor: not-allowed;
+}
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 26px 0;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin-right: 30px;
+      line-height: 1;
+      font-size: $nav-font;
+      &[type="logo"] {
+        margin: 0 57px 0 27px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        border-bottom: $nav-color;
+      }
+      a {
+        color: $nav-color;
+      }
+    }
+  }
+}

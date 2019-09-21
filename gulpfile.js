@@ -1,153 +1,175 @@
-var gulp = require('gulp'),
-    connect = require('gulp-connect'),
-    watch = require('gulp-watch'),
-    clean = require('gulp-clean'),
-    sass = require('gulp-sass'),
-    path = require('path'),
-    cleanCSS = require('gulp-clean-css'),//压缩css
-    imagemin = require('gulp-imagemin'),//压缩图片
-    cache = require('gulp-cache'), //解决缓存的图片不在加载
-    notify = require("gulp-notify"),//提示信息
-    uglify = require('gulp-uglify'),//压缩js
-    fileinclude  = require('gulp-file-include'), // 模板文件嵌入
-    htmlmin = require('gulp-htmlmin');//html压缩
-    sass.compiler = require('node-sass');
- 
-gulp.task('webserver', function() {
+'use strict';
+
+/* = Gulp组件
+-------------------------------------------------------------- */
+const { series, parallel, src, dest, watch } = require('gulp'), // Gulp
+    sass                = require('gulp-sass'),                 // Sass预处理
+    autoprefixer        = require('gulp-autoprefixer'),         // 自动添加css浏览器前缀
+    uglify              = require('gulp-uglify'),               // JS文件压缩
+    imagemin            = require('gulp-imagemin'),             // 图片压缩
+    pngquant            = require('imagemin-pngquant'),         // 深度压缩
+    connect             = require('gulp-connect'),              // 本地服务器
+    sourcemaps          = require('gulp-sourcemaps'),	        // 来源地图
+    changed             = require('gulp-changed'),		        // 只操作有过修改的文件
+    fileinclude         = require('gulp-file-include'),	        // 文件引入
+    tmodjs              = require('gulp-tmod'),                 // tmod模板
+    rename              = require('gulp-rename'),		        // 文件重命名
+    gutil               = require('gulp-util'),                 // gulp工具箱（包含了很多 task 会使用到的工具）
+    babel               = require('gulp-babel'),                // ES6转换
+    base64              = require('gulp-base64'),               // 图片转 base64
+    postcss             = require('gulp-postcss'),              // 样式转换插件
+    pxtoviewport        = require('postcss-px-to-viewport'),    // PX 转 Viewport
+    del                 = require('del');                       // 文件清理
+
+// include config
+const config = require('./gulp.config');
+
+// sass compiler
+sass.compiler = require('node-sass');
+
+/* = Environmental Witch
+-------------------------------------------------------------- */
+if ( gutil.env.test === true ) {
+    config.isDev = false;
+    config.sourceMap = false;
+    config.sassStyle = 'compressed';
+    config.pathsDev = config.pathsTest;
+}
+if ( gutil.env.build === true ) {
+    config.isDev = false;
+    config.sourceMap = false;
+    config.sassStyle = 'compressed';
+    config.pathsDev = config.pathsBuild;
+}
+
+/* = Task List
+-------------------------------------------------------------- */
+// html
+function html() {
+    return src( config.paths.html+'/**/!(m_)*.html' )
+        .pipe( config.isDev ? changed( config.pathsDev.html ) : gutil.noop() )
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file',
+            indent: true
+        }))
+        .pipe(dest( config.pathsDev.html ))
+        .pipe(connect.reload())
+};
+/*function html() {
+    return src(config.paths.tpl+'/*.html')
+        .pipe( config.isDev ? changed( config.pathsDev.html ) : gutil.noop() )
+        .pipe(tmodjs({
+            templateBase: 'src/template'
+        }))
+        .pipe(dest(config.pathsDev.html))
+        .pipe(connect.reload())
+}*/
+exports.html = html;
+
+// styles
+function styles() {
+    const processors = [
+        pxtoviewport({
+            viewportWidth: 750,
+            viewportUnit: 'vmin'
+        })
+    ];
+    return src(config.paths.css+'/*.scss')
+        .pipe(config.isDev ? sourcemaps.init() : gutil.noop())
+        .pipe(sass({outputStyle: config.sassStyle}).on('error', sass.logError))
+        .pipe(config.pxToViewport ? postcss(processors) : gutil.noop())
+        // .pipe(autoprefixer(config.autoprefixerConfig))
+        .pipe(base64(config.base64Config))
+        .pipe(config.sourceMap ? sourcemaps.write('maps') : gutil.noop())
+        .pipe(dest(config.pathsDev.css))
+        .pipe(connect.reload())
+};
+exports.styles = styles;
+
+// images
+function images() {
+    return src( [config.paths.image+'/**/*','!'+config.paths.image+'/sprite/*'] )
+        .pipe( config.isDev ? changed( config.pathsDev.html ) : gutil.noop() )
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(dest( config.pathsDev.image ))
+        .pipe(connect.reload())
+};
+exports.images = images;
+
+// scripts
+function scripts() {
+    return src([config.paths.script+'/*.js'])
+        .pipe(config.isDev ? sourcemaps.init() : gutil.noop())
+        .pipe(changed( config.pathsDev.script ))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(config.sourceMap ? sourcemaps.write('maps') : gutil.noop())
+        .pipe(dest( config.pathsDev.script ))
+        .pipe(connect.reload())
+};
+exports.scripts = scripts;
+
+// local server
+function server() {
     connect.server({
-        port: 1314,
-        root:'dist/',
+        name: 'ENV：' + (config.isDev ? 'Development' : 'Production'),
+        root: config.pathsDev.html,
+        // host: 'Local IP',
+        port: 8000,
         livereload: true
     });
-});
-//编译sass
-gulp.task('sass', function () {
-  return gulp.src('src/css/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(connect.reload())
-});
+};
+exports.server = server;
 
-//编译image
-gulp.task('image', function() {
-    return gulp.src('src/image/**/*.{png,gif,jpg,jpeg}')
-    .pipe(gulp.dest('dist/image'))
-    .pipe(connect.reload())
-});
-//编译js
-gulp.task('js', function() {
-    return gulp.src('src/js/**/*.js')
-    .pipe(gulp.dest('dist/js'))
-    .pipe(connect.reload())
-});
-// 启动监视
-gulp.task('watch', function() {
-    watch('src/**/*.html',function() {
-        gulp.start(['fileinclude']);
-    });
-    watch('src/css/**/*.sass', function() {
-        gulp.start(['sass']);
-    });
-    watch('src/js/**/*.js', function() {
-        gulp.start(['js']);
-    });
-    watch('src/image/**/*.{png,gif,jpg,jpeg}', function() {
-        gulp.start(['image']);
-    });
-});
-//配置任务流
-function swallowError(error) {
-    // If you want details of the error in the console
-  console.error(error.toString())
-  notify.onError({
-      title: 'Gulp',
-      subtitle: 'Failure!',
-      message: 'Error: <%= error.message %>',
-      sound: 'Beep'
-    })(error);
-  this.emit('end')
+// copy css
+function copycss() {
+    return src( [config.paths.html+'/lib/*.css'] )
+        .pipe(dest( config.pathsDev.css ));
+};
+exports.copycss = copycss;
+
+// copy js
+function copyjs() {
+    return src( [config.paths.html+'/lib/*.js'] )
+        .pipe(dest( config.pathsDev.script ));
+};
+exports.copyjs = copyjs;
+
+// watch
+function watchList() {
+    watch(config.paths.html + '/**/*.html', series(html));
+    watch(config.paths.css + '/*.scss', series(styles));
+    watch(config.paths.image + '/**/*', series(images));
+    watch(config.paths.script + '/*.js', series(scripts));
+
+    watch(config.paths.html + '/lib/*.css', series(copycss));
+    watch(config.paths.html + '/lib/*.js', series(copyjs));
 }
-//文件内嵌
-gulp.task('fileinclude',['fileinclude_view'],function() {
-    gulp.src(['src/index.html', '!src/componet/*.html'])
-        .pipe(fileinclude({
-          prefix: '@@',
-          basepath: '@file'
-        }))
-    .on('error', swallowError)
-    .pipe(htmlmin({collapseWhitespace: false}))
-    .pipe(gulp.dest('dist/'))
-    .pipe(connect.reload())
-});
-gulp.task('fileinclude_view',function() {
-    gulp.src(['src/view/**/*.html', '!src/componet/*.html'])
-        .pipe(fileinclude({
-          prefix: '@@',
-          basepath: '@file'
-        }))
-    .on('error', swallowError)
-    .pipe(htmlmin({collapseWhitespace: false}))
-    .pipe(gulp.dest('dist/view'))
-    .pipe(connect.reload())
-});
-// 清空dist
-gulp.task('clean', function() {
-    return gulp.src('dist/')
-    .pipe(clean());
-});
-gulp.task('dev', ['clean'],function(){
-    gulp.start(['js','image',
-                'sass','webserver','watch',
-                'fileinclude']);
-});
-gulp.task('default', ['dev']);
-//***********************************************************************
-// gulp product 压缩css/js/图片等文件，进行减少文件大小，但也会大大减弱文件可读性
-//编译压缩sass
-gulp.task('sass_min', function(){
-    return gulp.src('src/css/**/*.scss')
-    .pipe(sass())
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('dist/css'))
-    .pipe(connect.reload())
-});
-//编译压缩image
-gulp.task('image_min', function() {
-    return gulp.src('src/image/**/*.{png,gif,jpg,jpeg}')
-    .pipe(cache(imagemin({
-        optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-        progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-        interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-        multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
-     })))
-     .on('error', swallowError)
-     .pipe(gulp.dest('dist/image'))
-     .pipe(connect.reload())
-});
-//编译压缩js
-gulp.task('js_min', function() {
-    return gulp.src('src/js/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js'))
-    .pipe(connect.reload())
-});
-// 启动监视
-gulp.task('watch_min', function() {
-    watch('src/**/*.html',function() {
-        gulp.start(['fileinclude']);
+
+exports.watch = watchList;
+
+// clean
+function clean() {
+    return del([config.pathsDev.html + '/**']).then(() => {
+        console.log('项目初始化清理完成...');
     });
-    watch('src/css/**/*.sass', function() {
-        gulp.start(['sass_min']);
-    });
-    watch('src/js/**/*.js', function() {
-        gulp.start(['js_min']);
-    });
-    watch('src/image/**/*.{png,gif,jpg,jpeg}', function() {
-        gulp.start(['image_min']);
-    });
-});
-gulp.task('product', ['compress']);
-gulp.task('compress', ['clean'],function(){//压缩了css/js/图片
-    gulp.start(['fileinclude','image_min','sass_min',
-                'js_min','webserver','watch_min']);
-});  
+}
+exports.clean = clean;
+
+// default
+
+exports.default = series(parallel(server, watchList));
+
+// init/build
+exports.init = series(clean, html, styles, images, scripts, copycss, copyjs, (done) => {
+    console.log('项目初始化构建完成...');
+    done();
+})
