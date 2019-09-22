@@ -1,18 +1,24 @@
 @import "_macro";
 
 #home section {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: #fff;
   .bg {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
   .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 30px;
     color: $font-color;
     line-height: 1;
     .split {
@@ -28,7 +34,8 @@
 .module1 {
   .bg {
     background: url("../images/home_1.png") no-repeat;
-    background-size: 100% 100%;
+    background-position: 100% 100%;
+    background-size: cover;
   }
 }
 .module2 {
@@ -36,10 +43,9 @@
     background: url("../images/home_2.png") no-repeat;
     background-size: 100% 100%;
   }
-  width: 90%;
   .title {
     position: absolute;
-    top: 27%;
+    top: 27vh;
     left: 50%;
     width: 90%;
     transform: translate(-50%, -50%);
@@ -47,15 +53,191 @@
   }
   .introduce {
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 50%;
     width: 90%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: $font-color;
-    font-size: 2rem;
+    font-size: 24px;
     p {
       line-height: 40px;
+    }
+  }
+}
+.module3 {
+  .accordion {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    .accordion-item {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      position: relative;
+      float: left\0;
+      width: 16.6666%\0;
+      &:hover {
+        flex: 1 1 50%;
+        .shade {
+          top: -100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .shade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        transition: top 0.5s;
+      }
+      img {
+        width: 200%;
+        height: 100%;
+        transition: 0.5s;
+      }
+      .txt {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        span {
+          display: flex;
+          align-items: center;
+          i {
+            display: inline-block;
+            width: 106px;
+            height: 54px;
+            background: url('../images/home_3_logo.png') center center no-repeat;
+          }
+          strong {
+            margin-left: 10px;
+            font-size: 60px;
+            line-height: 1;
+          }
+        }
+      }
+    }
+    .accordion-item:nth-child(1) {
+      .txt {
+        top: 15vh
+      }
+    }
+    .accordion-item:nth-child(2) {
+      .txt {
+        top: 30vh
+      }
+    }
+    .accordion-item:nth-child(3) {
+      .txt {
+        top: 45vh
+      }
+    }
+    .accordion-item:nth-child(4) {
+      .txt {
+        top: 60vh
+      }
+    }
+    .accordion-item:nth-child(5) {
+      .txt {
+        top: 75vh
+      }
+    }
+    .accordion-item:nth-child(6) {
+      .txt {
+        top: 90vh
+      }
+    }
+  }
+}
+.module4 {
+  .bg {
+    background: url("../images/home_4.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    .item {
+      color: #fff;
+      h3 {
+        font-size: 42px;
+        line-height: 1;
+      }
+      span {
+        font-size: 16px;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+    .title {
+      margin: 10vh 0 5vh 0;
+    }
+    > div:nth-child(2) {
+      .item + .item {
+        margin-left: 42vh;
+      }
+    }
+    > div:nth-child(4) {
+      .item + .item {
+        margin-left: 55vh;
+      }
+    }
+    > div:nth-child(5) {
+      margin-top: 7vh;
+      .item + .item {
+        margin-left: 25vh;
+      }
+    }
+    .items {
+      display: flex;
+    }
+  }
+}
+.module5 {
+  ul {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: inline-block\0;
+    li {
+      position: relative;
+      float: left\0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      div {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        strong {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
