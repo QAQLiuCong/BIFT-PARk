@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="@@webRoot/css/index.css" />
   <link rel="stylesheet" href="@@webRoot/css/fullpage.min.css" />
   <script src="@@webRoot/js/fullpage.min.js"></script>
+  <script src="@@webRoot/js/lazysizes.min.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
       <div class="accordion">
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_1.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_1.png" alt="" />
           <div class="txt">
             <span><i></i><strong>RC</strong></span>
             <p>北服容城时尚产业园</p>
@@ -47,7 +48,7 @@
         </div>
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_2.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_2.png" alt="" />
           <div class="txt">
             <span><i></i><strong>CF</strong></span>
             <p>北服晨风时尚产业园</p>
@@ -55,7 +56,7 @@
         </div>
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_3.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_3.png" alt="" />
           <div class="txt">
             <span><i></i><strong>HN</strong></span>
             <p>北服海宁时尚产业园</p>
@@ -63,7 +64,7 @@
         </div>
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_4.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_4.png" alt="" />
           <div class="txt">
             <span><i></i><strong>QD</strong></span>
             <p>北服青岛时尚产业园</p>
@@ -71,7 +72,7 @@
         </div>
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_5.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_5.png" alt="" />
           <div class="txt">
             <span><i></i><strong>XC</strong></span>
             <p>北服兴城时尚产业园</p>
@@ -79,7 +80,7 @@
         </div>
         <div class="accordion-item">
           <div class="shade"></div>
-          <img src="@@webRoot/images/home_3_6.png" alt="" />
+          <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_3_6.png" alt="" />
           <div class="txt">
             <span><i></i><strong>BJ</strong></span>
             <p>北服北京时尚产业园</p>
@@ -137,37 +138,45 @@
     <section class="section module5" id="section5">
       <ul>
         <li>
-          <img src="@@webRoot/images/home_5_1.png" alt="" />
-          <div>
-            <strong>企业入驻</strong>
-            <p>Move-in</p>
-          </div>
+          <a href="enterpriseEntry.html">
+            <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_5_1.png" alt="" />
+            <div>
+              <strong>企业入驻</strong>
+              <p>Move-in</p>
+            </div>
+          </a>
         </li>
         <li>
-          <img src="@@webRoot/images/home_5_2.png" alt="" />
-          <div>
-            <strong>特色服务</strong>
-            <p>Services</p>
-          </div>
+          <a href="characteristicService.html">
+            <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_5_2.png" alt="" />
+            <div>
+              <strong>特色服务</strong>
+              <p>Services</p>
+            </div>
+          </a>
         </li>
         <li>
-          <img src="@@webRoot/images/home_5_3.png" alt="" />
-          <div>
-            <strong>时尚教育</strong>
-            <p>Fashion Education</p>
-          </div>
+          <a href="fashionEducation.html">
+            <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_5_3.png" alt="" />
+            <div>
+              <strong>时尚教育</strong>
+              <p>Fashion Education</p>
+            </div>
+          </a>
         </li>
         <li>
-          <img src="@@webRoot/images/home_5_4.png" alt="" />
-          <div>
-            <strong>时尚活动</strong>
-            <p>Fashion Activities</p>
-          </div>
+          <a href="fashionActivities.html">
+            <img data-sizes="auto" class="lazyload" data-src="@@webRoot/images/home_5_4.png" alt="" />
+            <div>
+              <strong>时尚活动</strong>
+              <p>Fashion Activities</p>
+            </div>
+          </a>
         </li>
       </ul>
     </section>
     <section class="section fp-auto-height" id="section6">
-        @@include('@@webRoot/template/footer.html', {"active": "home"})
+      @@include('@@webRoot/template/footer.html', {"active": "home"})
     </section>
   </main>
   <script>

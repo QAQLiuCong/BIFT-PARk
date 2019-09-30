@@ -6,27 +6,27 @@
 
 #home section .title .split { width: 12px; height: 24px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 25px; }
 
-.module1 .bg { background: url("../images/home_1.png") no-repeat; background-position: 100% 100%; background-size: cover; }
+.module1 .bg { background: url("../images/home_1.png") no-repeat 50%; background-size: cover; }
 
-.module2 .bg { background: url("../images/home_2.png") no-repeat; background-size: 100% 100%; }
+.module2 .bg { background: url("../images/home_2.png") no-repeat 50%; background-size: cover; }
 
-.module2 .title { position: absolute; top: 27vh; left: 50%; width: 90%; transform: translate(-50%, -50%); text-align: center; }
+.module2 .title { position: absolute; top: 25vh; left: 50%; width: 90%; transform: translate(-50%, -50%); text-align: center; }
 
-.module2 .introduce { position: absolute; top: 50vh; left: 50%; width: 90%; transform: translate(-50%, -50%); text-align: center; color: #fff; font-size: 24px; }
+.module2 .introduce { position: absolute; top: 48vh; left: 50%; width: 80%; transform: translate(-50%, -50%); text-align: center; color: #fff; font-size: 24px; }
 
 .module2 .introduce p { line-height: 40px; }
 
-.module3 .accordion { display: flex; width: 100%; box-sizing: border-box; height: 100vh; }
+.module3 .accordion { display: flex; width: 100%; box-sizing: border-box; height: 100vh; position: absolute; top: 0; left: 0; }
 
 .module3 .accordion .accordion-item { flex: 1; overflow: hidden; transition: 0.5s; position: relative; float: left\0; width: 16.6666%\0; }
 
 .module3 .accordion .accordion-item:hover { flex: 1 1 50%; }
 
-.module3 .accordion .accordion-item:hover .shade { top: -100%; }
+.module3 .accordion .accordion-item:hover .shade { opacity: 0; }
 
 .module3 .accordion .accordion-item:hover img { width: 100%; height: 100%; }
 
-.module3 .accordion .accordion-item .shade { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); transition: top 0.5s; }
+.module3 .accordion .accordion-item .shade { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.28); transition: opacity 0.3s; }
 
 .module3 .accordion .accordion-item img { width: 200%; height: 100%; transition: 0.5s; }
 
@@ -50,17 +50,17 @@
 
 .module3 .accordion .accordion-item:nth-child(6) .txt { top: 90vh; }
 
-.module4 .bg { background: url("../images/home_4.png") no-repeat; background-size: 100% 100%; }
+.module4 .bg { background: url("../images/home_4.png") no-repeat 50%; background-size: cover; }
 
-.module4 .content { display: flex; justify-content: center; align-items: center; flex-direction: column; position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); }
+.module4 .content { display: flex; justify-content: center; align-items: center; flex-direction: column; position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); }
 
 .module4 .content .item { color: #fff; }
 
-.module4 .content .item h3 { font-size: 42px; line-height: 1; }
+.module4 .content .item h3 { font-size: 42px; line-height: 1; white-space: nowrap; }
 
-.module4 .content .item span { font-size: 16px; line-height: 1; white-space: nowrap; }
+.module4 .content .item span { font-size: 16px; line-height: 1; white-space: nowrap; margin: 0.6vh 0; display: inline-block; }
 
-.module4 .content .item p { font-size: 24px; line-height: 1; }
+.module4 .content .item p { font-size: 24px; line-height: 1; white-space: nowrap; }
 
 .module4 .content .title { margin: 10vh 0 5vh 0; }
 
@@ -74,14 +74,32 @@
 
 .module4 .content .items { display: flex; }
 
-.module5 ul { display: flex; width: 100%; height: 100vh; box-sizing: border-box; display: inline-block\0; }
+.module5 ul { display: flex; width: 100%; height: 100%; box-sizing: border-box; position: absolute; top: 0; left: 0; display: inline-block\0; }
 
 .module5 ul li { position: relative; float: left\0; }
 
-.module5 ul li img { width: 100%; height: 100%; }
+.module5 ul li:hover img { transform: scale(1.1); }
 
-.module5 ul li div { position: absolute; top: 20vh; left: 50%; transform: translateX(-50%); color: #fff; }
+.module5 ul li:hover div { opacity: 1; }
 
-.module5 ul li div strong { font-size: 30px; }
+.module5 ul li img { transition: all 0.2s ease; width: 100%; height: 100%; }
 
-.module5 ul li div p { font-size: 20px; }
+.module5 ul li div { position: absolute; top: 20vh; left: 50%; transform: translateX(-50%); color: #fff; transition: all 0.2s ease; opacity: 0.6; }
+
+.module5 ul li div strong { font-size: 30px; white-space: nowrap; }
+
+.module5 ul li div p { font-size: 20px; white-space: nowrap; }
+
+@media screen and (max-width: 1400px) { #home section .title { font-size: 26px; }
+  #home section .title .split { width: 10px; height: 20px; }
+  .module2 .introduce { font-size: 20px; }
+  .module4 .content { top: 52%; }
+  .module4 .content .title { margin: 8vh 0 5vh 0; }
+  .module4 .content div:nth-child(2) .item + .item { margin-left: 38vh; }
+  .module4 .content div:nth-child(4) .item + .item { margin-left: 50vh; }
+  .module4 .content div:nth-child(5) .item + .item { margin-left: 23vh; }
+  .module4 .content .item h3 { font-size: 36px; }
+  .module4 .content .item span { font-size: 14px; }
+  .module4 .content .item p { font-size: 20px; }
+  .module5 ul li div strong { font-size: 26px; }
+  .module5 ul li div p { font-size: 18px; } }
