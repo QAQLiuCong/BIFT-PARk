@@ -174,8 +174,8 @@
           .item {
             .description {
               .desc-txt {
-                font-size: 16px;
-                line-height: 33px;
+                font-size: 18px;
+                line-height: 34px;
               }
             }
           }
@@ -215,7 +215,7 @@
           .item {
             .description {
               .desc-txt {
-                font-size: 15px;
+                font-size: 16px;
                 line-height: 30px;
               }
             }
@@ -241,13 +241,24 @@
       }
     }
     .content-wrap {
+      .top-txt {
+        font-size: 16px;
+        padding: 7vh 0;
+      }
       .park-info {
+        .info-title {
+          font-size: 24px;
+          letter-spacing: 16px;
+          i {
+            width: 18vw;
+          }
+        }
         .info-list {
           .item {
             .description {
               .desc-txt {
-                font-size: 12px;
-                line-height: 30px;
+                font-size: 14px;
+                line-height: 28px;
               }
             }
           }

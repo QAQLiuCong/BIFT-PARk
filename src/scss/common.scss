@@ -106,7 +106,7 @@ header {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   background: rgba(255, 255, 255, 0.8);
-  padding: 26px 0;
+  padding: 25px 0;
   text-align: center;
   ul {
     display: flex;
@@ -131,6 +131,7 @@ header {
       }
       &.active {
         border-bottom: $nav-color;
+        font-weight: normal;
       }
       a {
         color: $nav-color;
@@ -209,9 +210,79 @@ footer {
   bottom: 0;
   background: rgba(0, 0, 0, 0.28);
   transition: all 0.4s linear;
+  transform: translate3d(0, 0, 0);
+}
+.fake-nav {
+  height: 106px;
+}
+.building {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  span {
+    display: flex;
+    align-items: center;
+    i {
+      display: inline-block;
+      width: 156px;
+      height: 79px;
+      background: url("../images/enterprise-entry_1.png") center center
+        no-repeat;
+      background-size: contain;
+      border-right: 4px solid #000;
+    }
+    strong {
+      margin-left: 15px;
+      font-size: 80px;
+      line-height: 1;
+      color: #000;
+    }
+  }
+  img {
+    margin-top: 6vh;
+    width: 40px;
+    transform: rotate(-30deg);
+  }
+  p {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    margin-top: 3vh;
+    line-height: 1;
+  }
 }
 
 @media screen and (max-width: 1400px) {
+  .fake-nav {
+    height: 85px;
+  }
+  .building {
+    span {
+      i {
+        width: 104px;
+        height: 53px;
+        border-right: 3px solid #000;
+      }
+      strong {
+        margin-left: 15px;
+        font-size: 56px;
+        line-height: 1;
+        color: #000;
+      }
+    }
+    img {
+      transform: rotate(-30deg);
+    }
+    p {
+      font-size: 18px;
+    }
+  }
   header {
     padding: 15px 0;
     ul {

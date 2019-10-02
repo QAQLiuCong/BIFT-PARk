@@ -76,7 +76,7 @@
     .accordion-item {
       flex: 1;
       overflow: hidden;
-      transition: 0.5s;
+      transition: all 0.5s;
       position: relative;
       float: left\0;
       width: 16.6666%\0;
@@ -160,6 +160,12 @@
   }
 }
 .module4 {
+  &.active {
+    .content {
+      top: 54%;
+      opacity: 1;
+    }
+  }
   .bg {
     background: url("../images/home_4.png") no-repeat 50%;
     background-size: cover;
@@ -171,8 +177,10 @@
     flex-direction: column;
     position: absolute;
     left: 50%;
-    top: 54%;
-    transform: translate(-50%, -50%);
+    top: 58%;
+    opacity: 0;
+    transition: all .8s ease .3s;
+    transform: translate(-50%, -50%) translateZ(0);
     .item {
       color: #fff;
       h3 {
@@ -247,10 +255,10 @@
         position: absolute;
         top: 20vh;
         left: 50%;
-        transform: translateX(-50%);
         color: #fff;
         transition: all 0.2s ease;
         opacity: 0.6;
+        transform: translateX(-50%) translate3d(0, 0, 0);
         strong {
           font-size: 30px;
           white-space: nowrap;

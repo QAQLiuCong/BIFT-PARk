@@ -1,12 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>企业入驻</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="@@webRoot/css/common.css" />
+    <link rel="stylesheet" href="@@webRoot/css/swiper.css" />
+    <link rel="stylesheet" href="@@webRoot/css/enterprise_entry.css" />
 </head>
+
 <body>
-    
+    @@include('@@webRoot/template/header.html', {"active": "enterpriseEntry"})
+    <main id="enterprise-entry">
+        <div class="fake-nav"></div>
+        <div class="main">
+            <ul class="l-nav">
+                <li class="active" data-id="BJ">北京园区</li>
+                <li data-id="RC">容城园区</li>
+                <li data-id="CF">晨风园区</li>
+                <li data-id="HN">海宁园区</li>
+                <li data-id="QD">青岛园区</li>
+                <li data-id="XC">兴城园区</li>
+            </ul>
+            <div class="r-content">
+                <div style="display: block" class="r-box" data-id="BJ">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <div class="building">
+                                <span><i></i><strong>BJ</strong></span>
+                                <img src="@@webRoot/images/build.svg" alt="" />
+                                <p>建设中... 敬请期待</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box" data-id="RC">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <!-- <div class="building">
+                                <span><i></i><strong>RC</strong></span>
+                                <img src="@@webRoot/images/build.svg" alt="">
+                                <p>建设中... 敬请期待</p>
+                            </div> -->
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_2.png"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_3.png"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_4.png"
+                                            alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box" data-id="CF">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_3.png"
+                                            alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box" data-id="HN">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <div class="building">
+                                <span><i></i><strong>HN</strong></span>
+                                <img src="@@webRoot/images/build.svg" alt="" />
+                                <p>建设中... 敬请期待</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box" data-id="QD">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <div class="building">
+                                <span><i></i><strong>QD</strong></span>
+                                <img src="@@webRoot/images/build.svg" alt="" />
+                                <p>建设中... 敬请期待</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box" data-id="XC">
+                    <div class="r-item">
+                        <div class="info">
+                            <div>
+                                <span>联系人</span>:
+                                <p>刘存</p>
+                            </div>
+                            <div>
+                                <span>电话</span>:
+                                <p>18519190731</p>
+                            </div>
+                            <div>
+                                <span>邮箱</span>:
+                                <p>biftbj@biftpark.com</p>
+                            </div>
+                            <div>
+                                <span>地址</span>:
+                                <p>北京市海淀区花园北路29号</p>
+                            </div>
+                        </div>
+                        <div class="plan-img">
+                            <div class="building">
+                                <span><i></i><strong>XC</strong></span>
+                                <img src="@@webRoot/images/build.svg" alt="" />
+                                <p>建设中... 敬请期待</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('@@webRoot/template/footer.html')
+    <script src="@@webRoot/js/jquery.min.js"></script>
+    <script src="@@webRoot/js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            $(".swiper-container").each(function (i) {
+                new Swiper($(this), {
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false
+                    },
+                    observer: true,
+                    observeParents: true,
+                    lazy: {
+                        loadPrevNext: true
+                    }
+                });
+            });
+            $(".l-nav").on("mouseenter mouseleave", "li", function () {
+                var index = $(this).index();
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(".r-content .r-box")
+                    .siblings()
+                    .hide()
+                    .eq(index)
+                    .show();
+                var this_swiper = $(".r-content .r-box")
+                    .eq(index)
+                    .find(".swiper-container");
+            });
+        });
+    </script>
 </body>
+
 </html>
