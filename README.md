@@ -72,11 +72,15 @@ $ yarn install
 ## 使用方法(Used)
 
 ```bash
-# 项目初始化 - Project initialization
+# 第一种
+# 1.项目初始化 - Project initialization
 $ gulp init
-
-# 环境启动 - Start it
+# 2.环境启动 - Start it
 $ gulp
+
+# 第二种
+# 项目初始化 和 启动
+$ npm run dev
 ```
 
 ##环境切换(Using environment variables)
@@ -87,6 +91,7 @@ $ gulp init --test
 
 # 发布生产环境 - Build for production environment
 $ gulp init --build
+$ npm run build
 
 # 清理生产目录 - Clean up development or production
 $ gulp clean
