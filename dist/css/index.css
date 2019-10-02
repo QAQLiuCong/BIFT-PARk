@@ -6,7 +6,7 @@
 
 #home section .title .split { width: 12px; height: 24px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 25px; }
 
-.module1 .bg { background: url("../images/home_1.png") no-repeat 50%; background-size: cover; }
+.module1 .bg { background: url("../images/home_1.png") no-repeat 50% 75%; background-size: cover; }
 
 .module2 .bg { background: url("../images/home_2.png") no-repeat 50%; background-size: cover; }
 
