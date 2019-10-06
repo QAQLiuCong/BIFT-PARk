@@ -1,0 +1,218 @@
+@import "_macro";
+#fashion-education {
+  .title {
+    line-height: 1;
+    color: #000;
+    font-size: 36px;
+    padding: 0 5vw;
+    .split {
+      width: 12px;
+      height: 24px;
+      background: #000;
+      display: inline-block;
+      transform: skewX(-40deg);
+      margin: 0 25px 0 50px;
+    }
+    em {
+      font-size: 30px;
+      font-style: normal;
+    }
+  }
+  .banner {
+    height: 100vh;
+    position: relative;
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        width: 60vw;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: #fff;
+          font-size: 60px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        z-index: 20;
+        color: #ccc;
+        padding: 8px;
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s;
+        &:hover {
+          color: #fff;
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+      .swiper-button-disabled {
+        opacity: 0;
+      }
+      .swiper-button-next {
+        right: 30px;
+      }
+      .swiper-button-prev {
+        left: 30px;
+      }
+    }
+  }
+  .teaching-system {
+    background: #fff;
+    padding: 10vh 0 0;
+    .teaching-system-content {
+      display: flex;
+      padding: 10vh 0;
+      img {
+        vertical-align: middle;
+        width: 100%;
+        transition: all 0.3s;
+      }
+      .l-box {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        .p-center {
+          justify-content: center;
+          color: #fff;
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.5);
+          h3 {
+            line-height: 1;
+            font-size: 60px;
+          }
+          p {
+            font-size: 30px;
+            line-height: 1;
+            margin-top: 15px;
+          }
+        }
+      }
+      .r-box {
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .row {
+          display: flex;
+          .row-item {
+            position: relative;
+            margin-right: 1.2vw;
+            overflow: hidden;
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+            .p-center {
+              justify-content: center;
+              color: #fff;
+              flex-direction: column;
+              background: rgba(0, 0, 0, 0.5);
+              h3 {
+                line-height: 1;
+                font-size: 34px;
+              }
+              p {
+                font-size: 14px;
+                line-height: 1;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .teaching-feature {
+    background: #fff;
+    .feature-list {
+      padding: 10vh 5vw 0;
+      display: flex;
+      flex-wrap: wrap;
+      .list-item {
+        flex: 0 0 16.66%;
+        color: #000;
+        img {
+          vertical-align: middle;
+          width: 100%;
+        }
+        h3 {
+          padding: 13% 12.5%;
+          font-size: 20px;
+          line-height: 1;
+          font-weight: normal;
+        }
+        p {
+          padding: 0 12.5%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .academic-cooperation {
+    background: #fff;
+    .cooperation-content {
+      padding: 10vh 5vw;
+      .academic-swiper {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        .swiper-slide {
+          text-align: center;
+          img {
+            max-width: 256px;
+            width: 100%;
+            vertical-align: middle;
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          z-index: 20;
+          color: #ccc;
+          padding: 8px;
+          width: 45px;
+          height: 45px;
+          transition: all 0.3s;
+          margin-top: -30px;
+          &:hover {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.2);
+          }
+        }
+        .swiper-button-next {
+          right: 0;
+        }
+        .swiper-button-prev {
+          left: 0;
+        }
+      }
+      .map {
+          margin-top: 10vh;
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

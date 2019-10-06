@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>时尚活动</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/fashion_activities.css" />
+</head>
+
+<body>
+    <header>
+      <ul>
+        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
+        <li class="active"><a href="./fashionActivities.html">时尚活动</a></li>
+        <li ><a href="./fashionEducation.html">时尚教育</a></li>
+        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+        <li ><a href="./characteristicService.html">特色服务</a></li>
+        <li ><a href="./designMatch.html">设计大赛</a></li>
+        <li ><a href="./aboutUs.html">关于我们</a></li>
+      </ul>
+    </header>
+    <main id="fashion-activities">
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="swiper-lazy" data-src="./images/fashion-activities_1.png" alt="" />
+                        <div class="text">
+                            <p>2019·国家公费奖学金筑梦计划</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="plate">
+            <div class="fashion-release">
+                <img src="./images/fashion-activities_2.png" alt="">
+                <div class="text">
+                    <h3>时尚发布</h3>
+                    <p>Fashion release</p>
+                </div>
+            </div>
+            <div class="fashion-exhibition">
+                <img src="./images/fashion-activities_3.png" alt="">
+                <div class="text">
+                    <h3>时尚会展</h3>
+                    <p>Fashion Exhibition</p>
+                </div>
+            </div>
+            <div class="thematic-activities">
+                <img src="./images/fashion-activities_4.png" alt="">
+                <div class="text">
+                    <h3>专题活动</h3>
+                    <p>Thematic activities</p>
+                </div>
+            </div>
+            <div class="industry-communication">
+                <img src="./images/fashion-activities_5.png" alt="">
+                <div class="text">
+                    <h3>行业交流</h3>
+                    <p>Industry communication</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="top">
+        <h4>北京服装学院官网</h4>
+        <div class="about-us">
+          <h3>联系我们</h3>
+          <div>
+            <div>
+              <p>媒体合作</p>
+              <p>Email:</p>
+              <p style="color: #fff">yueyang@biftpark.com</p>
+            </div>
+            <div>
+              <p>业务合作</p>
+              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
+              <p>传真号码 Fax: (010) 64520943</p>
+              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+        <p>京ICP备18000308号-1</p>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            $(".swiper-container").each(function () {
+                var slideChild = $(this).find('.swiper-slide').length
+                new Swiper($(this), {
+                    speed: 600,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false
+                    },
+                    loop: slideChild > 1,
+                    observer: true,
+                    observeParents: true,
+                    lazy: {
+                        loadPrevNext: true
+                    },
+                    // 如果需要前进后退按钮
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

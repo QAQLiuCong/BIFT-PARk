@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>特殊服务</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="@@webRoot/css/common.css" />
+    <link rel="stylesheet" href="@@webRoot/css/fullpage.min.css" />
+    <link rel="stylesheet" href="@@webRoot/css/characteristic_service.css" />
+</head>
+
+<body>
+    @@include('@@webRoot/template/header.html', {"active": "characteristicService"})
+    <main id="characteristic-service">
+        <section class="section" id="section1">
+            <div class="banner">
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_1.png" alt="" />
+                <div class="text">
+                    <p>特色服务</p>
+                    <h3>services</h3>
+                </div>
+            </div>
+        </section>
+        <section class="section module design-RD" id="section2">
+            <img class="lazyload bg" data-src="@@webRoot/images/characteristic-service_2.png" alt="">
+            <div class="text">
+                <p>设计研发<span class="split"></span>Design R&D</p>
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_3.png" alt="">
+            </div>
+        </section>
+        <section class="section module fashion-communication" id="section3">
+            <img class="lazyload bg" data-src="@@webRoot/images/characteristic-service_4.png" alt="">
+            <div class="text">
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_5.png" alt="">
+                <p>时尚传播<span class="split"></span>Fashion Communication</p>
+            </div>
+        </section>
+        <section class="section module patternmaking-center" id="section4">
+            <img class="lazyload bg" data-src="@@webRoot/images/characteristic-service_6.png" alt="">
+            <div class="text">
+                <p>中央板房<span class="split"></span>Patternmaking Center</p>
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_7.png" alt="">
+            </div>
+        </section>
+        <section class="section module business-consulting" id="section5">
+            <img class="lazyload bg" data-src="@@webRoot/images/characteristic-service_8.png" alt="">
+            <div class="text">
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_9.png" alt="">
+                <p>企业咨询<span class="split"></span>Business Consulting</p>
+            </div>
+        </section>
+        <section class="section module haute-couture" id="section6">
+            <img class="lazyload bg" data-src="@@webRoot/images/characteristic-service_10.png" alt="">
+            <div class="text">
+                <p>高级定制<span class="split"></span>Haute-Couture</p>
+                <img class="lazyload" data-src="@@webRoot/images/characteristic-service_11.png" alt="">
+            </div>
+        </section>
+        <section class="section fp-auto-height" id="section7">
+            @@include('@@webRoot/template/footer.html')
+        </section>
+    </main>
+    @@include('@@webRoot/template/footer.html')
+    <script src="@@webRoot/js/fullpage.min.js"></script>
+    <script src="@@webRoot/js/lazysizes.min.js"></script>
+    <script>
+        new fullpage("#characteristic-service", {
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            navigation: true
+        });
+    </script>
+</body>
+
+</html>

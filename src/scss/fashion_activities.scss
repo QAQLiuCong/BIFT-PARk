@@ -1,0 +1,96 @@
+@import "_macro";
+#fashion-activities {
+  .banner {
+    height: 100vh;
+    position: relative;
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,.5);
+        width: 60vw;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: #fff;
+          font-size: 60px;
+        }
+      }
+      .swiper-button-next,.swiper-button-prev {
+        z-index: 20;
+        color: #ccc;
+        padding: 8px;
+        width: 45px;
+        height: 45px;
+        transition: all .3s;
+        &:hover {
+          color: #fff;
+          background: rgba(0,0,0,.2);
+        }
+      }
+      .swiper-button-disabled {
+        opacity: 0;
+      }
+      .swiper-button-next {
+        right: 30px;
+      }
+       .swiper-button-prev {
+        left: 30px;
+      }
+    }
+  }
+  .plate {
+    > div {
+      position: relative;
+      .text {
+        position: absolute;
+        z-index: 2;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h3 {
+          font-size: 30px;
+          line-height: 1;
+        }
+        p {
+          line-height: 1;
+          font-size: 20px;
+          margin-top: 15px;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+@media (min-width: 750px) and (max-width: 1400px) {
+  #fashion-activities {
+    .plate {
+      > div {
+        .text {
+          h3 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

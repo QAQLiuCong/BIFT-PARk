@@ -1,0 +1,74 @@
+@import "_macro";
+#characteristic-service {
+  .split {
+    width: 12px;
+    height: 24px;
+    background: #fff;
+    display: inline-block;
+    transform: skewX(-40deg);
+    margin: 0 40px;
+  }
+  .banner {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+    background: #fff;
+    img,
+    .text {
+      flex: 1;
+    }
+    img {
+      max-width: 769px;
+    }
+    .text {
+      text-align: center;
+      color: #000;
+      p {
+        font-size: 80px;
+        line-height: 1;
+      }
+      h3 {
+        margin-top: 15px;
+        font-size: 56px;
+        line-height: 1;
+      }
+    }
+  }
+  .module {
+    position: relative;
+    img.bg {
+      width: 100%;
+      height: 100vh;
+      vertical-align: middle;
+      object-fit: none;
+    }
+    .text {
+      position: absolute;
+      width: 100%;
+      height: 50vh;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 30px;
+      color: #fff;
+      img {
+        flex: 1;
+        height: 100%;
+      }
+      p {
+        flex: 2;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (min-width: 750px) and (max-width: 1400px) {
+  #characteristic-service {
+  }
+}

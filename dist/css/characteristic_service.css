@@ -1,0 +1,23 @@
+#characteristic-service .split { width: 12px; height: 24px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 40px; }
+
+#characteristic-service .banner { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; padding: 0 5vw; background: #fff; }
+
+#characteristic-service .banner img, #characteristic-service .banner .text { flex: 1; }
+
+#characteristic-service .banner img { max-width: 769px; }
+
+#characteristic-service .banner .text { text-align: center; color: #000; }
+
+#characteristic-service .banner .text p { font-size: 80px; line-height: 1; }
+
+#characteristic-service .banner .text h3 { margin-top: 15px; font-size: 56px; line-height: 1; }
+
+#characteristic-service .module { position: relative; }
+
+#characteristic-service .module img.bg { width: 100%; height: 100vh; vertical-align: middle; object-fit: none; }
+
+#characteristic-service .module .text { position: absolute; width: 100%; height: 50vh; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.5); font-size: 30px; color: #fff; }
+
+#characteristic-service .module .text img { flex: 1; height: 100%; }
+
+#characteristic-service .module .text p { flex: 2; text-align: center; }

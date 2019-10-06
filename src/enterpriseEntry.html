@@ -80,7 +80,7 @@
                                 <img src="@@webRoot/images/build.svg" alt="">
                                 <p>建设中... 敬请期待</p>
                             </div> -->
-                            <div class="swiper-container">
+                            <div class="swiper-container swiper1">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_2.png"
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="plan-img">
-                            <div class="swiper-container">
+                            <div class="swiper-container swiper2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img class="swiper-lazy" data-src="@@webRoot/images/enterprise-entry_3.png"
@@ -228,19 +228,7 @@
     <script src="@@webRoot/js/swiper.min.js"></script>
     <script>
         $(function () {
-            $(".swiper-container").each(function (i) {
-                new Swiper($(this), {
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false
-                    },
-                    observer: true,
-                    observeParents: true,
-                    lazy: {
-                        loadPrevNext: true
-                    }
-                });
-            });
+            var swiperList = [];
             $(".l-nav").on("mouseenter mouseleave", "li", function () {
                 var index = $(this).index();
                 $(this)
@@ -252,10 +240,27 @@
                     .hide()
                     .eq(index)
                     .show();
-                var this_swiper = $(".r-content .r-box")
-                    .eq(index)
-                    .find(".swiper-container");
+                var swiperContainer = $(".r-content .r-box").eq(index).find('.swiper-container');
+                if (swiperContainer.length) {
+                    swiperList[index] && swiperList[index].destroy()
+                    updateSwiper(swiperContainer, index)
+                }
             });
+            function updateSwiper(dom, index) {
+                var slideChild = $(dom).find('.swiper-slide').length
+                swiperList[index] = new Swiper(dom, {
+                    autoplay: {
+                        delay: 1500,
+                        disableOnInteraction: false
+                    },
+                    loop: slideChild > 1,
+                    observer: true,
+                    observeParents: true,
+                    lazy: {
+                        loadPrevNext: true
+                    }
+                });
+            }
         });
     </script>
 </body>
