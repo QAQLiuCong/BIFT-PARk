@@ -309,5 +309,27 @@
         }
       }
     }
+
+    .academic-cooperation {
+      .cooperation-content {
+        .academic-swiper-box {
+          .academic-swiper-next,
+          .academic-swiper-prev {
+            width: 30px;
+            height: 30px;
+            margin-top: -22px;
+            i {
+              font-size: 30px;
+            }
+          }
+          .academic-swiper-next {
+            right: -15px;
+          }
+          .academic-swiper-prev {
+            left: -15px;
+          }
+        }
+      }
+    }
   }
 }

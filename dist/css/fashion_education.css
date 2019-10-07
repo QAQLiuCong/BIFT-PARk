@@ -123,4 +123,8 @@
   #fashion-education .teaching-system .teaching-system-content .r-box .row .row-item .p-center h3 { font-size: 28px; }
   #fashion-education .teaching-system .teaching-system-content .r-box .row .row-item .p-center p { font-size: 13px; }
   #fashion-education .teaching-feature .feature-list .list-item h3 { padding: 13% 12.5% 10%; font-size: 18px; }
-  #fashion-education .teaching-feature .feature-list .list-item p { font-size: 14px; } }
+  #fashion-education .teaching-feature .feature-list .list-item p { font-size: 14px; }
+  #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-next, #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-prev { width: 30px; height: 30px; margin-top: -22px; }
+  #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-next i, #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-prev i { font-size: 30px; }
+  #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-next { right: -15px; }
+  #fashion-education .academic-cooperation .cooperation-content .academic-swiper-box .academic-swiper-prev { left: -15px; } }
