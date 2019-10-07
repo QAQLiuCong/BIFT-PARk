@@ -1,6 +1,8 @@
 @font-face { font-family: SourceHanSans; src: url("../font/SourceHanSans-Light.otf"); }
 
-html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 12px; font-family: SourceHanSans, -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif; text-rendering: optimizeLegibility; color: #333; background-color: #f4f5f5; }
+@font-face { font-family: segoeui; src: url("../font/segoeui.ttf"); }
+
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 12px; font-family: SourceHanSans, -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif; text-rendering: optimizeLegibility; color: #333; }
 
 * { margin: 0; padding: 0; }
 
@@ -100,8 +102,7 @@ footer .bottom p + p { margin-top: 15px; }
 
 @media screen and (max-width: 1400px) { .fake-nav { height: 85px; }
   .building span i { width: 104px; height: 53px; border-right: 3px solid #000; }
-  .building span strong { margin-left: 15px; font-size: 56px; line-height: 1; color: #000; }
-  .building img { transform: rotate(-30deg); }
+  .building span strong { font-size: 56px; }
   .building p { font-size: 18px; }
   header { padding: 15px 0; }
   header ul li { font-size: 16px; }

@@ -1,9 +1,5 @@
 @import "_macro";
 
-@font-face {
-  font-family: SourceHanSans;
-  src: url("../font/SourceHanSans-Light.otf");
-}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -13,7 +9,6 @@ html {
     sans-serif;
   text-rendering: optimizeLegibility;
   color: #333;
-  background-color: #f4f5f5;
 }
 * {
   margin: 0;
@@ -232,7 +227,7 @@ footer {
       display: inline-block;
       width: 156px;
       height: 79px;
-      background: url("../images/enterprise-entry_1.png") center center
+      background: url("../images/building_1.png") center center
         no-repeat;
       background-size: contain;
       border-right: 4px solid #000;
@@ -270,14 +265,8 @@ footer {
         border-right: 3px solid #000;
       }
       strong {
-        margin-left: 15px;
         font-size: 56px;
-        line-height: 1;
-        color: #000;
       }
-    }
-    img {
-      transform: rotate(-30deg);
     }
     p {
       font-size: 18px;

@@ -1,3 +1,7 @@
+@font-face { font-family: SourceHanSans; src: url("../font/SourceHanSans-Light.otf"); }
+
+@font-face { font-family: segoeui; src: url("../font/segoeui.ttf"); }
+
 #enterprise-entry { height: 100vh; background: #fff; }
 
 #enterprise-entry .main { margin: 0 3vw 0 6vw; align-items: center; display: flex; height: calc(100vh - 106px); }
@@ -22,7 +26,7 @@
 
 #enterprise-entry .r-content .r-item .info > div p { line-height: 36px; margin-left: 1vh; }
 
-#enterprise-entry .r-content .r-item .plan-img { position: relative; margin-left: 6vw; max-width: 775px; height: 47vh; max-height: 440px; width: 40.8vw; background: #FEF4EB; display: flex; align-items: center; justify-content: center; }
+#enterprise-entry .r-content .r-item .plan-img { position: relative; margin-left: 6vw; max-width: 775px; height: 47vh; max-height: 440px; width: 40.8vw; background: #fef4eb; display: flex; align-items: center; justify-content: center; }
 
 #enterprise-entry .r-content .r-item .plan-img .swiper-container { width: 100%; height: 100%; }
 

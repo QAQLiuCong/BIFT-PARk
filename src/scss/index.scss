@@ -125,6 +125,9 @@
             line-height: 1;
           }
         }
+        p {
+          margin-top: 5px;
+        }
       }
     }
     .accordion-item:nth-child(1) {
@@ -134,27 +137,27 @@
     }
     .accordion-item:nth-child(2) {
       .txt {
-        top: 30vh;
+        top: 29vh;
       }
     }
     .accordion-item:nth-child(3) {
       .txt {
-        top: 45vh;
+        top: 42vh;
       }
     }
     .accordion-item:nth-child(4) {
       .txt {
-        top: 60vh;
+        top: 56vh;
       }
     }
     .accordion-item:nth-child(5) {
       .txt {
-        top: 75vh;
+        top: 70vh;
       }
     }
     .accordion-item:nth-child(6) {
       .txt {
-        top: 90vh;
+        top: 84vh;
       }
     }
   }
@@ -179,7 +182,7 @@
     left: 50%;
     top: 58%;
     opacity: 0;
-    transition: all .8s ease .3s;
+    transition: all 0.8s ease 0.3s;
     transform: translate(-50%, -50%) translateZ(0);
     .item {
       color: #fff;
@@ -285,6 +288,24 @@
   .module2 {
     .introduce {
       font-size: 20px;
+    }
+  }
+  .module3 {
+    .accordion {
+      .accordion-item {
+        .txt {
+          span {
+            i {
+              width: 95px;
+              height: 48px;
+              background-size: cover;
+            }
+            strong {
+              font-size: 48px;
+            }
+          }
+        }
+      }
     }
   }
   .module4 {

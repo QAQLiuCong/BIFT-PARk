@@ -1,0 +1,495 @@
+@import "_macro";
+#industrial-park {
+  .title {
+    line-height: 1;
+    color: #000;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    font-family: segoeui, -apple-system, system-ui, BlinkMacSystemFont,
+      Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial,
+      sans-serif;
+    .split {
+      width: 14px;
+      height: 34px;
+      background: #000;
+      display: inline-block;
+      transform: skewX(-38deg);
+      margin: 5px 30px 0;
+    }
+    em {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: $build-bg;
+    background-size: cover;
+    background-position: 50%;
+    .building-box {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .building {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: auto;
+        height: auto;
+        flex: 1;
+        span {
+          display: flex;
+          align-items: center;
+          i {
+            display: inline-block;
+            width: 432px;
+            height: 237px;
+            background: url("../images/building_2.png") center center no-repeat;
+            background-size: contain;
+            border-right: 2px solid #fff;
+            padding-right: 2vw;
+          }
+          strong {
+            margin-left: 2vw;
+            font-size: 250px;
+            line-height: 1;
+            color: #000;
+          }
+        }
+        img {
+          margin-top: 4vh;
+          width: 70px;
+          transform: rotate(-30deg);
+        }
+        div {
+          margin-top: 6vh;
+          font-size: 42px;
+          color: #000;
+          line-height: 1;
+          letter-spacing: 30px;
+        }
+        p {
+          font-size: 28px;
+          color: #000;
+          font-weight: 600;
+          margin-top: 3vh;
+          line-height: 1;
+        }
+      }
+    }
+    &.rc-banner {
+      background: url(../images/rongcheng-banner.png) no-repeat;
+    }
+    &.cf-banner {
+      background: url(../images/chenfeng-banner.png) no-repeat;
+    }
+    &.hn-banner {
+      background: url(../images/haining-banner.png) no-repeat;
+    }
+    .text {
+      span {
+        display: flex;
+        align-items: center;
+        i {
+          display: inline-block;
+          width: 432px;
+          height: 237px;
+          background: url("../images/banner-logo.png") center center no-repeat;
+          background-size: contain;
+          border-right: 2px solid #fff;
+          padding-right: 2vw;
+        }
+        strong {
+          margin-left: 2vw;
+          font-size: 250px;
+          line-height: 1;
+          color: #fff;
+        }
+      }
+      div {
+        margin-top: 6vh;
+        font-size: 42px;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: 30px;
+        text-align: center;
+      }
+    }
+  }
+  .content-wrap {
+    background: #fff;
+    .introduction {
+      padding: 10vh 0;
+      .title {
+        margin-bottom: 10vh;
+      }
+      p {
+        padding: 0 6vw 0 29vw;
+        font-size: 24px;
+        color: #737373;
+        line-height: 60px;
+      }
+    }
+    .base-info {
+      .info {
+        padding: 10vh 0;
+        font-size: 24px;
+        color: #737373;
+        display: flex;
+        justify-content: center;
+        > div {
+          margin: 0 5vw;
+        }
+        .left-info,
+        .right-info {
+          > div {
+            display: flex;
+            line-height: 1;
+            margin-bottom: 40px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        span {
+          min-width: 100px;
+          text-align: right;
+          margin-right: 2vw;
+        }
+      }
+    }
+    .supporting-resources {
+      .resourse-list {
+        padding: 10vh 8vw 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        div {
+          flex: 0 0 16.66%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 5vh;
+          p {
+            margin-top: 2vh;
+            line-height: 1;
+            font-size: 24px;
+            color: #737373;
+          }
+          img {
+            max-width: 96px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .space-display {
+      .display-content-box {
+        margin: 10vh 0;
+        position: relative;
+        height: 55vh;
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+          .swiper-slide {
+            border-radius: 10px;
+            &:hover {
+              .p-center {
+                opacity: 1;
+              }
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+            }
+            .p-center {
+              flex-direction: column;
+              justify-content: center;
+              color: #fff;
+              background: rgba(0, 0, 0, 0.5);
+              opacity: 0;
+              border-radius: 10px;
+              h3 {
+                font-size: 32px;
+                line-height: 1;
+                font-weight: normal;
+              }
+              p {
+                margin-top: 15px;
+                font-size: 20px;
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+      .display-box {
+        margin: 10vh 0;
+        position: relative;
+        height: 55vh;
+        background: $build-bg;
+        .building {
+          span {
+            strong {
+              margin-left: 15px;
+              line-height: 1;
+              color: #000;
+            }
+          }
+          img {
+            transform: rotate(-30deg);
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .map {
+      margin-top: 10vh;
+      position: relative;
+      .title {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10vh 15vw;
+      .way {
+        div {
+          font-size: 24px;
+          color: #737373;
+          margin-bottom: 6vh;
+          display: flex;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          span,
+          p {
+            margin: 0 10px;
+          }
+        }
+      }
+      .code {
+        position: relative;
+        background: $build-bg;
+        width: 20vw;
+        height: 40vh;
+        max-width: 372px;
+        max-height: 372px;
+        .building {
+          span {
+            i {
+              width: 104px;
+              height: 53px;
+              border-right: 3px solid #000;
+            }
+            strong {
+              font-size: 56px;
+            }
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      img {
+        max-width: 372px;
+        vertical-align: middle;
+      }
+    }
+    .plan-img {
+      position: relative;
+      margin-bottom: 5vh;
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+    .plan {
+      position: relative;
+      max-height: 323px;
+      background: $build-bg;
+      height: 30vh;
+      margin-bottom: 5vh;
+      .building {
+        span {
+          i {
+            width: 104px;
+            height: 53px;
+            border-right: 3px solid #000;
+          }
+          strong {
+            font-size: 56px;
+          }
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1400px) {
+  #industrial-park {
+    .title {
+      font-size: 32px;
+      .split {
+        height: 28px;
+        margin: 2px 30px 0;
+      }
+      em {
+        font-size: 26px;
+      }
+    }
+    .banner {
+      .building-box {
+        .building {
+          span {
+            i {
+              width: 260px;
+              height: 142px;
+            }
+            strong {
+              font-size: 172px;
+              font-weight: normal;
+            }
+          }
+          div {
+            font-size: 28px;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      .text {
+        span {
+          i {
+            width: 260px;
+            height: 142px;
+          }
+          strong {
+            font-size: 172px;
+            font-weight: normal;
+          }
+        }
+        div {
+          font-size: 28px;
+        }
+      }
+    }
+    .content-wrap {
+      background: #fff;
+      .introduction {
+        padding: 10vh 0;
+        .title {
+          margin-bottom: 10vh;
+        }
+        p {
+          font-size: 22px;
+          line-height: 40px;
+        }
+      }
+      .base-info {
+        .info {
+          font-size: 22px;
+        }
+      }
+      .supporting-resources {
+        .resourse-list {
+          div {
+            p {
+              font-size: 22px;
+            }
+            img {
+              max-width: 77px;
+            }
+          }
+        }
+      }
+      .space-display {
+        .display-content-box {
+          height: 55vh;
+          .swiper-container {
+            .swiper-slide {
+              border-radius: 10px;
+              &:hover {
+                .p-center {
+                  opacity: 1;
+                }
+              }
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+              }
+              .p-center {
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                border-radius: 10px;
+                h3 {
+                  font-size: 24px;
+                  line-height: 1;
+                  font-weight: normal;
+                }
+                p {
+                  margin-top: 15px;
+                  font-size: 16px;
+                  width: 80%;
+                  line-height: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contact {
+        padding: 10vh 10vw;
+        .way {
+          div {
+            font-size: 22px;
+            color: #737373;
+            margin-bottom: 6vh;
+            display: flex;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            span,
+            p {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+      .plan {
+        height: 35vh;
+      }
+    }
+  }
+}
