@@ -33,6 +33,12 @@
                             <p>2019·国家公费奖学金筑梦计划</p>
                         </div>
                     </div>
+                    <!-- <div class="swiper-slide">
+                        <img class="swiper-lazy lazyload" data-src="./images/fashion-activities_1.png" alt="" />
+                        <div class="text">
+                            <p>2019·国家公费奖学金筑梦计划</p>
+                        </div>
+                    </div> -->
                 </div>
                 <!-- 如果需要导航按钮 -->
                 <div class="swiper-button-prev"></div>
@@ -172,42 +178,40 @@
         <div class="academic-cooperation">
             <h3 class="title">BIFTPARK<span class="split"></span><em>学术合作</em></h3>
             <div class="cooperation-content">
-                <div class="swiper-container academic-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_1.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_2.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_3.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_4.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_5.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_6.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_3.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_4.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_5.png" alt="" />
+                <div class="academic-swiper-box">
+                    <div class="swiper-container academic-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_1.png"
+                                    alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_2.png"
+                                    alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_3.png"
+                                    alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_4.png"
+                                    alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_5.png"
+                                    alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-lazy lazyload" data-src="./images/cooperate_logo_6.png"
+                                    alt="" />
+                            </div>
                         </div>
                     </div>
-                    <!-- 如果需要导航按钮 -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="academic-swiper-prev"><i class="iconfont icon-left"></i></div>
+                    <div class="academic-swiper-next"><i class="iconfont icon-right"></i></div>
                 </div>
                 <div class="map">
-                    <img class="lazyload" data-src="./images/fashion-education_8.png" alt="">
+                    <img class="lazyload" data-src="./images/fashion-education_17.png" alt="">
                 </div>
             </div>
         </div>
@@ -270,6 +274,7 @@
                 },
                 slidesPerView: 6,
                 slidesPerGroup: 6,
+                loop: true,
                 observer: true,
                 observeParents: true,
                 lazy: {
@@ -279,13 +284,14 @@
                     resize: function () {
                         academic_swiper.update()
                     },
-                },
-                // 如果需要前进后退按钮
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
                 }
             });
+            $('.academic-swiper-prev').on('click', function () {
+                academic_swiper.slidePrev();
+            })
+            $('.academic-swiper-next').on('click', function () {
+                academic_swiper.slideNext();
+            })
         });
     </script>
 </body>
