@@ -40,6 +40,10 @@ button, select { text-transform: none; }
 
 ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
 
+video::-internal-media-controls-download-button { display: none; }
+
+video::-webkit-media-controls-enclosure { overflow: hidden; }
+
 header { position: fixed; top: 0; left: 0; z-index: 999; width: 100%; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; background: rgba(255, 255, 255, 0.8); padding: 25px 0; text-align: center; }
 
 header ul { display: flex; justify-content: center; align-items: center; display: inline-block\0; }

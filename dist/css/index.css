@@ -12,6 +12,12 @@
 
 .module1 .bg { background: url("../images/home_1.png") no-repeat 50% 75%; background-size: cover; }
 
+.module1 .pc-video-page { display: none; position: relative; left: 0; top: 0; height: 100vh; }
+
+.module1 .pc-video-page .video-container { height: 100%; position: relative; overflow: hidden; }
+
+.module1 .pc-video-page .video-container video { width: 100%; height: 100%; object-fit: cover; }
+
 .module2 .bg { background: url("../images/home_2.png") no-repeat 50%; background-size: cover; }
 
 .module2 .title { position: absolute; top: 25vh; left: 50%; width: 90%; transform: translate(-50%, -50%); text-align: center; }
@@ -24,15 +30,9 @@
 
 .module3 .accordion .accordion-item { flex: 1; overflow: hidden; transition: all 0.5s; position: relative; float: left\0; width: 16.6666%\0; }
 
-.module3 .accordion .accordion-item:hover { flex: 1 1 50%; }
-
-.module3 .accordion .accordion-item:hover .shade { opacity: 0; }
-
-.module3 .accordion .accordion-item:hover img { width: 100%; height: 100%; }
-
 .module3 .accordion .accordion-item .shade { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.28); transition: opacity 0.3s; }
 
-.module3 .accordion .accordion-item img { width: 200%; height: 100%; transition: 0.5s; }
+.module3 .accordion .accordion-item img { width: 100%; height: 100%; transition: 0.5s; }
 
 .module3 .accordion .accordion-item .txt { position: absolute; top: 20vh; left: 50%; transform: translateX(-50%); color: #fff; }
 
@@ -100,6 +100,7 @@
 
 @media screen and (max-width: 1400px) { #home section .title { font-size: 26px; }
   #home section .title .split { width: 10px; height: 20px; }
+  .module1 .pc-video-page .video-container { height: calc(100% - 85px); }
   .module2 .introduce { font-size: 20px; }
   .module3 .accordion .accordion-item .txt span i { width: 95px; height: 48px; background-size: cover; }
   .module3 .accordion .accordion-item .txt span strong { font-size: 48px; }

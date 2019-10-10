@@ -92,6 +92,13 @@ select {
   -webkit-appearance: button;
   font: inherit;
 }
+video::-internal-media-controls-download-button {
+  display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
 header {
   position: fixed;
   top: 0;
@@ -227,8 +234,7 @@ footer {
       display: inline-block;
       width: 156px;
       height: 79px;
-      background: url("../images/building_1.png") center center
-        no-repeat;
+      background: url("../images/building_1.png") center center no-repeat;
       background-size: contain;
       border-right: 4px solid #000;
     }
