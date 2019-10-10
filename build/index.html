@@ -26,23 +26,33 @@
   <main id="home">
     <section class="section module1" id="section1">
       <div class="bg"></div>
+      <!-- <div class="pc-video-page">
+        <div class="video-container">
+          <video width="100%" controls="controls" controlslist="nodownload" id="home-video">
+            <source
+              src="http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"
+              type="video/mp4"></video>
+        </div>
+      </div> -->
     </section>
     <section class="section module2" id="section2">
-      <div class="bg"></div>
-      <div class="title">北服创新园<i class="split"></i>BIFT PARK</div>
-      <div class="introduce">
-        <p>
-          2012年3月有北京市人民政府与北京服装学院共建的 “中关村科学城”
-          第四批签约项目<br />北京服装学院服饰时尚设计产业创新园（简称中关村时尚产业创新园）落成。
-        </p>
-        <p>
-          BIFTPARK
-          中关村时尚产业创业园总面积占地10000平方米的，是在京高校签约中关村科技城7个文化产业项目中，唯一的服饰时尚设计产业园。
-        </p>
-        <p>
-          园区将打造成为全球知名设计师聚集中心，助力北京乃至全国时尚创意产业的蓬勃发展。
-        </p>
-      </div>
+      <a href="aboutUs.html">
+        <div class="bg"></div>
+        <div class="title">北服创新园<i class="split"></i>BIFT PARK</div>
+        <div class="introduce">
+          <p>
+            2012年3月有北京市人民政府与北京服装学院共建的 “中关村科学城”
+            第四批签约项目<br />北京服装学院服饰时尚设计产业创新园（简称中关村时尚产业创新园）落成。
+          </p>
+          <p>
+            BIFTPARK
+            中关村时尚产业创业园总面积占地10000平方米的，是在京高校签约中关村科技城7个文化产业项目中，唯一的服饰时尚设计产业园。
+          </p>
+          <p>
+            园区将打造成为全球知名设计师聚集中心，助力北京乃至全国时尚创意产业的蓬勃发展。
+          </p>
+        </div>
+      </a>
     </section>
     <section class="section module3" id="section3">
       <div class="accordion">
@@ -233,6 +243,11 @@
       autoScrolling: true,
       navigation: true
     });
+    // window.onload = function() {
+    //   setTimeout(function(){
+    //     document.querySelector('.pc-video-page').style.display = 'block'
+    //   },3000)
+    // }
   </script>
 </body>
 
