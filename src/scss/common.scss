@@ -99,6 +99,23 @@ video::-internal-media-controls-download-button {
 video::-webkit-media-controls-enclosure {
   overflow: hidden;
 }
+
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  .loading-img {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 header {
   position: fixed;
   top: 0;

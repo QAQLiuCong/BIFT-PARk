@@ -6,12 +6,29 @@
     <title>产业园</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/industrial_park.css" />
 </head>
 
 <body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script>
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
     <header>
       <ul>
         <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
@@ -19,7 +36,7 @@
         <li ><a href="./fashionEducation.html">时尚教育</a></li>
         <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
         <li ><a href="./characteristicService.html">特色服务</a></li>
-        <li ><a href="./designMatch.html">设计大赛</a></li>
+        <li ><a>设计大赛</a></li>
         <li ><a href="./aboutUs.html">关于我们</a></li>
       </ul>
     </header>
@@ -33,7 +50,9 @@
         <div class="content-wrap">
             <div class="introduction">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>园区简介</em></h3>
-                <p>北京服装学院海宁时尚产业园，由北京服装学院、海宁市人民政府，海宁中国皮革城，以北京服装学院和世家皮草（SAGA FURS）联合为基础，协同海宁皮革皮草（服装）产业资源，开展皮革皮草（服装）设计人才、品牌等人才的教育和培养，致力打造中国及世界皮革皮草（服装）高级人才的“培养基地”。建设成为特色突出、优势明显、产学研高度融合、具有国际领先水平的以皮草为特色的时尚教育和研发基地。是北京服装学院发展校地合作与国际合作之重要成果，同时助力海宁服装产业转型升级与创新发展。</p>
+                <p>北京服装学院海宁时尚产业园，由北京服装学院、海宁市人民政府，海宁中国皮革城，以北京服装学院和世家皮草（SAGA
+                    FURS）联合为基础，协同海宁皮革皮草（服装）产业资源，开展皮革皮草（服装）设计人才、品牌等人才的教育和培养，致力打造中国及世界皮革皮草（服装）高级人才的“培养基地”。建设成为特色突出、优势明显、产学研高度融合、具有国际领先水平的以皮草为特色的时尚教育和研发基地。是北京服装学院发展校地合作与国际合作之重要成果，同时助力海宁服装产业转型升级与创新发展。
+                </p>
             </div>
             <div class="base-info">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>基本信息</em></h3>
@@ -183,8 +202,8 @@
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 100,
-                modifier: 2,
+                depth: 100.1,
+                modifier: 6,
             },
         })
     </script>

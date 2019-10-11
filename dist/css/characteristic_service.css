@@ -8,7 +8,7 @@
 
 #characteristic-service .banner img, #characteristic-service .banner .text { flex: 1; }
 
-#characteristic-service .banner img { max-width: 769px; }
+#characteristic-service .banner img { max-width: 769px; width: 50vw; vertical-align: middle; }
 
 #characteristic-service .banner .text { text-align: center; color: #000; }
 
@@ -24,4 +24,9 @@
 
 #characteristic-service .module .text img { flex: 1; height: 100%; }
 
-#characteristic-service .module .text p { flex: 2; text-align: center; }
+#characteristic-service .module .text p { flex: 2; text-align: center; display: flex; justify-content: center; align-items: center; }
+
+@media (min-width: 1000px) and (max-width: 1400px) { #characteristic-service .split { width: 12px; height: 24px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 40px; }
+  #characteristic-service .banner .text p { font-size: 60px; }
+  #characteristic-service .banner .text h3 { font-size: 42px; }
+  #characteristic-service .module .text { font-size: 24px; } }

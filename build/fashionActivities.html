@@ -6,12 +6,29 @@
     <title>时尚活动</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/fashion_activities.css" />
 </head>
 
 <body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script>
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
     <header>
       <ul>
         <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
@@ -19,7 +36,7 @@
         <li ><a href="./fashionEducation.html">时尚教育</a></li>
         <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
         <li ><a href="./characteristicService.html">特色服务</a></li>
-        <li ><a href="./designMatch.html">设计大赛</a></li>
+        <li ><a>设计大赛</a></li>
         <li ><a href="./aboutUs.html">关于我们</a></li>
       </ul>
     </header>
@@ -28,7 +45,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="swiper-lazy" data-src="./images/fashion-activities_1.png" alt="" />
+                        <img class="swiper-lazy lazyload" data-src="./images/fashion-activities_1.png" alt="" />
                         <div class="text">
                             <p>2019·国家公费奖学金筑梦计划</p>
                         </div>
@@ -41,28 +58,28 @@
         </div>
         <div class="plate">
             <div class="fashion-release">
-                <img src="./images/fashion-activities_2.png" alt="">
+                <img class="lazyload" data-src="./images/fashion-activities_2.png" alt="">
                 <div class="text">
                     <h3>时尚发布</h3>
                     <p>Fashion release</p>
                 </div>
             </div>
             <div class="fashion-exhibition">
-                <img src="./images/fashion-activities_3.png" alt="">
+                <img class="lazyload" data-src="./images/fashion-activities_3.png" alt="">
                 <div class="text">
                     <h3>时尚会展</h3>
                     <p>Fashion Exhibition</p>
                 </div>
             </div>
             <div class="thematic-activities">
-                <img src="./images/fashion-activities_4.png" alt="">
+                <img class="lazyload" data-src="./images/fashion-activities_4.png" alt="">
                 <div class="text">
                     <h3>专题活动</h3>
                     <p>Thematic activities</p>
                 </div>
             </div>
             <div class="industry-communication">
-                <img src="./images/fashion-activities_5.png" alt="">
+                <img class="lazyload" data-src="./images/fashion-activities_5.png" alt="">
                 <div class="text">
                     <h3>行业交流</h3>
                     <p>Industry communication</p>
@@ -96,6 +113,7 @@
       </div>
     </footer>
 
+    <script src="./js/lazysizes.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script>

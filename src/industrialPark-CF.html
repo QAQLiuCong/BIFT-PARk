@@ -6,12 +6,14 @@
     <title>产业园</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="@@webRoot/css/swiper.css" />
     <link rel="stylesheet" href="@@webRoot/css/common.css" />
     <link rel="stylesheet" href="@@webRoot/css/industrial_park.css" />
 </head>
 
 <body>
+    @@include('@@webRoot/template/loading.html')
     @@include('@@webRoot/template/header.html', {"active": "industrialPark"})
     <main id="industrial-park">
         <div class="banner cf-banner">
@@ -23,7 +25,8 @@
         <div class="content-wrap">
             <div class="introduction">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>园区简介</em></h3>
-                <p>北京服装学院晨风时尚产业园于2017年6月投入运营，由北京服装学院和晨风集团共同打造，是北京服装学院积极融入产业、服务产业的重要举措，园区依托晨风集团及长三角充沛的产业资源，积极探索产业服务及人才培养。园区位于江苏省昆山市花桥晨风路8号 ，毗邻上海市嘉定区，占地面积3万平方米，整体风格由香港资深高级设计师高文安先生设计，园区周围交通、生活、娱乐设施丰富，紧邻上海地铁11号线兆丰路站 ，距离上海虹桥枢纽20公里。</p>
+                <p>北京服装学院晨风时尚产业园于2017年6月投入运营，由北京服装学院和晨风集团共同打造，是北京服装学院积极融入产业、服务产业的重要举措，园区依托晨风集团及长三角充沛的产业资源，积极探索产业服务及人才培养。园区位于江苏省昆山市花桥晨风路8号
+                    ，毗邻上海市嘉定区，占地面积3万平方米，整体风格由香港资深高级设计师高文安先生设计，园区周围交通、生活、娱乐设施丰富，紧邻上海地铁11号线兆丰路站 ，距离上海虹桥枢纽20公里。</p>
             </div>
             <div class="base-info">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>基本信息</em></h3>
@@ -152,8 +155,8 @@
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 100,
-                modifier: 2,
+                depth: 100.1,
+                modifier: 6,
             },
         })
     </script>

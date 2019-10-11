@@ -6,11 +6,28 @@
     <title>产业园</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/industrial_park.css" />
 </head>
 
 <body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script>
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
     <header>
       <ul>
         <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
@@ -18,7 +35,7 @@
         <li ><a href="./fashionEducation.html">时尚教育</a></li>
         <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
         <li ><a href="./characteristicService.html">特色服务</a></li>
-        <li ><a href="./designMatch.html">设计大赛</a></li>
+        <li ><a>设计大赛</a></li>
         <li ><a href="./aboutUs.html">关于我们</a></li>
       </ul>
     </header>
@@ -37,7 +54,9 @@
         <div class="content-wrap">
             <div class="introduction">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>园区简介</em></h3>
-                <p>牡丹园园区是北服创新园在京总部，目标建设成3.0版北服创新园范本。结合首都特色、海淀文化，深化产教融合，全力打造以资源开放共享为核心的服饰时尚设计全产业链生态圈和充满活力的时尚人才聚集地。同时，作为北京服装学 院重要的产学研基地和成果转化中心 ，北服创新园牡丹园园区将构建首都时尚创意企业孵化基地、创新创业生态园和 时尚产业新地标，全面带动国际化时尚设计教育的转型升级。未来将充分发挥总部的核心作用，搭建北服创新园全国分园资源信息平台，国际人才工作站、海淀区文创产业先锋。</p>
+                <p>牡丹园园区是北服创新园在京总部，目标建设成3.0版北服创新园范本。结合首都特色、海淀文化，深化产教融合，全力打造以资源开放共享为核心的服饰时尚设计全产业链生态圈和充满活力的时尚人才聚集地。同时，作为北京服装学
+                    院重要的产学研基地和成果转化中心 ，北服创新园牡丹园园区将构建首都时尚创意企业孵化基地、创新创业生态园和
+                    时尚产业新地标，全面带动国际化时尚设计教育的转型升级。未来将充分发挥总部的核心作用，搭建北服创新园全国分园资源信息平台，国际人才工作站、海淀区文创产业先锋。</p>
             </div>
             <div class="base-info">
                 <h3 class="title">BIFT PARK<span class="split"></span><em>基本信息</em></h3>

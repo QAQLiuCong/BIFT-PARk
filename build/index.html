@@ -6,12 +6,29 @@
   <title>首页</title>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/fullpage.min.css" />
   <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
+  <div id="loading" class="loading">
+      <div class="loading-img">
+          <img src="../images/loading.gif" alt="">
+      </div>
+  </div>
+  <script>
+      //监听加载状态改变
+      document.onreadystatechange = completeLoading;
+      //加载状态为complete时移除loading效果
+      function completeLoading() {
+          if (document.readyState == "complete") {
+              var loadingMask = document.getElementById('loading');
+              loadingMask.parentNode.removeChild(loadingMask);
+          }
+      }
+  </script>
   <header>
     <ul>
       <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
@@ -19,7 +36,7 @@
       <li ><a href="./fashionEducation.html">时尚教育</a></li>
       <li class="active" type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
       <li ><a href="./characteristicService.html">特色服务</a></li>
-      <li ><a href="./designMatch.html">设计大赛</a></li>
+      <li ><a>设计大赛</a></li>
       <li ><a href="./aboutUs.html">关于我们</a></li>
     </ul>
   </header>
@@ -236,13 +253,14 @@
   </main>
   <script src="./js/fullpage.min.js"></script>
   <script src="./js/lazysizes.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
   <script>
-    new fullpage("#home", {
-      css3: true,
-      scrollingSpeed: 700,
-      autoScrolling: true,
-      navigation: true
-    });
+      new fullpage("#home", {
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        navigation: true
+      });
     // window.onload = function() {
     //   setTimeout(function(){
     //     document.querySelector('.pc-video-page').style.display = 'block'

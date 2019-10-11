@@ -4,9 +4,9 @@
 
 #about-us .banner { display: flex; justify-content: center; align-items: center; height: 100vh; position: relative; background: url(../images/about-us_1.png) no-repeat 50%; background-size: cover; }
 
-#about-us .banner .title { display: flex; justify-content: center; align-items: center; font-size: 62px; color: #fff; line-height: 1; transition: all .3s; }
+#about-us .banner .title { display: flex; justify-content: center; align-items: center; font-size: 62px; color: #fff; line-height: 1; }
 
-#about-us .banner .title .split { width: 20px; height: 48px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 60px; transition: all .3s; }
+#about-us .banner .title .split { width: 20px; height: 48px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 60px; }
 
 #about-us .content-wrap .top-txt { font-size: 20px; color: #737373; width: 72%; text-align: center; padding: 10vh 0; margin: 0 auto; }
 

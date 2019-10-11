@@ -29,7 +29,7 @@
     .r-box {
       display: none;
       border: 1px solid #000;
-      padding: 11vh 5vw 11vh 6vw;
+      padding: 11vh 5vw;
     }
     .r-item {
       display: flex;
@@ -79,7 +79,29 @@
     }
   }
 }
-@media (min-width: 1270px) and (max-width: 1400px) {
+@media (min-width: 1401px) and (max-width: 1560px) {
+  #enterprise-entry {
+    .r-content {
+      .r-item {
+        .info {
+          > div {
+            span {
+              min-width: 85px;
+              margin-right: .5vh;
+            }
+            p {
+              margin-left: .5vh;
+            }
+          }
+        }
+        .plan-img {
+          margin-left: 5vw;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1000px) and (max-width: 1400px) {
   #enterprise-entry {
     .main {
       height: calc(100vh - 85px);

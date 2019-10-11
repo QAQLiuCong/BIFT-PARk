@@ -6,19 +6,21 @@
     <title>时尚活动</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="@@webRoot/css/common.css" />
     <link rel="stylesheet" href="@@webRoot/css/swiper.css" />
     <link rel="stylesheet" href="@@webRoot/css/fashion_activities.css" />
 </head>
 
 <body>
+    @@include('@@webRoot/template/loading.html')
     @@include('@@webRoot/template/header.html', {"active": "fashionActivities"})
     <main id="fashion-activities">
         <div class="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="swiper-lazy" data-src="@@webRoot/images/fashion-activities_1.png" alt="" />
+                        <img class="swiper-lazy lazyload" data-src="@@webRoot/images/fashion-activities_1.png" alt="" />
                         <div class="text">
                             <p>2019·国家公费奖学金筑梦计划</p>
                         </div>
@@ -31,28 +33,28 @@
         </div>
         <div class="plate">
             <div class="fashion-release">
-                <img src="@@webRoot/images/fashion-activities_2.png" alt="">
+                <img class="lazyload" data-src="@@webRoot/images/fashion-activities_2.png" alt="">
                 <div class="text">
                     <h3>时尚发布</h3>
                     <p>Fashion release</p>
                 </div>
             </div>
             <div class="fashion-exhibition">
-                <img src="@@webRoot/images/fashion-activities_3.png" alt="">
+                <img class="lazyload" data-src="@@webRoot/images/fashion-activities_3.png" alt="">
                 <div class="text">
                     <h3>时尚会展</h3>
                     <p>Fashion Exhibition</p>
                 </div>
             </div>
             <div class="thematic-activities">
-                <img src="@@webRoot/images/fashion-activities_4.png" alt="">
+                <img class="lazyload" data-src="@@webRoot/images/fashion-activities_4.png" alt="">
                 <div class="text">
                     <h3>专题活动</h3>
                     <p>Thematic activities</p>
                 </div>
             </div>
             <div class="industry-communication">
-                <img src="@@webRoot/images/fashion-activities_5.png" alt="">
+                <img class="lazyload" data-src="@@webRoot/images/fashion-activities_5.png" alt="">
                 <div class="text">
                     <h3>行业交流</h3>
                     <p>Industry communication</p>
@@ -61,6 +63,7 @@
         </div>
     </main>
     @@include('@@webRoot/template/footer.html')
+    <script src="@@webRoot/js/lazysizes.min.js"></script>
     <script src="@@webRoot/js/jquery.min.js"></script>
     <script src="@@webRoot/js/swiper.min.js"></script>
     <script>

@@ -6,12 +6,14 @@
   <title>首页</title>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="@@webRoot/css/common.css" />
   <link rel="stylesheet" href="@@webRoot/css/fullpage.min.css" />
   <link rel="stylesheet" href="@@webRoot/css/index.css" />
 </head>
 
 <body>
+  @@include('@@webRoot/template/loading.html')
   @@include('@@webRoot/template/header.html', {"active": "home"})
   <main id="home">
     <section class="section module1" id="section1">
@@ -201,13 +203,14 @@
   </main>
   <script src="@@webRoot/js/fullpage.min.js"></script>
   <script src="@@webRoot/js/lazysizes.min.js"></script>
+  <script src="@@webRoot/js/jquery.min.js"></script>
   <script>
-    new fullpage("#home", {
-      css3: true,
-      scrollingSpeed: 700,
-      autoScrolling: true,
-      navigation: true
-    });
+      new fullpage("#home", {
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        navigation: true
+      });
     // window.onload = function() {
     //   setTimeout(function(){
     //     document.querySelector('.pc-video-page').style.display = 'block'

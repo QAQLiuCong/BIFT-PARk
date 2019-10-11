@@ -15,7 +15,6 @@
       font-size: 62px;
       color: $font-color;
       line-height: 1;
-      transition: all .3s;
       .split {
         width: 20px;
         height: 48px;
@@ -23,7 +22,6 @@
         display: inline-block;
         transform: skewX(-40deg);
         margin: 0 60px;
-        transition: all .3s;
       }
     }
   }

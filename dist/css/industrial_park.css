@@ -66,7 +66,7 @@
 
 #industrial-park .content-wrap .supporting-resources .resourse-list div img { max-width: 96px; vertical-align: middle; }
 
-#industrial-park .content-wrap .space-display .display-content-box { margin: 10vh 0; position: relative; height: 55vh; }
+#industrial-park .content-wrap .space-display .display-content-box { padding: 0 3vw; margin: 10vh 0; position: relative; height: 45vh; }
 
 #industrial-park .content-wrap .space-display .display-content-box .swiper-container { width: 100%; height: 100%; }
 
@@ -82,7 +82,7 @@
 
 #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide .p-center p { margin-top: 15px; font-size: 20px; width: 80%; }
 
-#industrial-park .content-wrap .space-display .display-box { margin: 10vh 0; position: relative; height: 55vh; background: #fef4eb; }
+#industrial-park .content-wrap .space-display .display-box { margin: 10vh 0; position: relative; height: 48vh; background: #fef4eb; }
 
 #industrial-park .content-wrap .space-display .display-box .building span strong { margin-left: 15px; line-height: 1; color: #000; }
 
@@ -96,7 +96,7 @@
 
 #industrial-park .content-wrap .map img { width: 100%; vertical-align: middle; }
 
-#industrial-park .content-wrap .contact { display: flex; justify-content: space-between; align-items: center; padding: 10vh 15vw; }
+#industrial-park .content-wrap .contact { display: flex; justify-content: space-between; align-items: center; padding: 10vh 12vw; }
 
 #industrial-park .content-wrap .contact .way div { font-size: 24px; color: #737373; margin-bottom: 6vh; display: flex; }
 
@@ -104,7 +104,9 @@
 
 #industrial-park .content-wrap .contact .way div span, #industrial-park .content-wrap .contact .way div p { margin: 0 10px; }
 
-#industrial-park .content-wrap .contact .code { position: relative; background: #fef4eb; width: 20vw; height: 40vh; max-width: 372px; max-height: 372px; }
+#industrial-park .content-wrap .contact .way div span { white-space: nowrap; }
+
+#industrial-park .content-wrap .contact .code { position: relative; background: #fef4eb; width: 30vw; height: 40vh; max-width: 372px; max-height: 372px; }
 
 #industrial-park .content-wrap .contact .code .building span i { width: 104px; height: 53px; border-right: 3px solid #000; }
 
@@ -126,7 +128,7 @@
 
 #industrial-park .content-wrap .plan .building p { font-size: 18px; }
 
-@media (min-width: 750px) and (max-width: 1400px) { #industrial-park .title { font-size: 32px; }
+@media (min-width: 1000px) and (max-width: 1400px) { #industrial-park .title { font-size: 32px; }
   #industrial-park .title .split { height: 28px; margin: 2px 30px 0; }
   #industrial-park .title em { font-size: 26px; }
   #industrial-park .banner .building-box .building span i { width: 260px; height: 142px; }
@@ -143,15 +145,15 @@
   #industrial-park .content-wrap .base-info .info { font-size: 22px; }
   #industrial-park .content-wrap .supporting-resources .resourse-list div p { font-size: 22px; }
   #industrial-park .content-wrap .supporting-resources .resourse-list div img { max-width: 77px; }
-  #industrial-park .content-wrap .space-display .display-content-box { height: 55vh; }
+  #industrial-park .content-wrap .space-display .display-content-box { height: 45vh; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide { border-radius: 10px; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide:hover .p-center { opacity: 1; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide img { width: 100%; height: 100%; border-radius: 10px; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide .p-center { flex-direction: column; justify-content: center; color: #fff; background: rgba(0, 0, 0, 0.5); opacity: 0; border-radius: 10px; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide .p-center h3 { font-size: 24px; line-height: 1; font-weight: normal; }
   #industrial-park .content-wrap .space-display .display-content-box .swiper-container .swiper-slide .p-center p { margin-top: 15px; font-size: 16px; width: 80%; line-height: 28px; }
-  #industrial-park .content-wrap .contact { padding: 10vh 10vw; }
-  #industrial-park .content-wrap .contact .way div { font-size: 22px; color: #737373; margin-bottom: 6vh; display: flex; }
+  #industrial-park .content-wrap .contact { padding: 10vh 8vw; }
+  #industrial-park .content-wrap .contact .way div { font-size: 22px; color: #737373; margin-bottom: 5vh; display: flex; }
   #industrial-park .content-wrap .contact .way div:last-child { margin-bottom: 0; }
   #industrial-park .content-wrap .contact .way div span, #industrial-park .content-wrap .contact .way div p { margin: 0 10px; }
   #industrial-park .content-wrap .plan { height: 35vh; } }
