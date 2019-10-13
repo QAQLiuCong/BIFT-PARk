@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>设计研发</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/characteristic.css" />
+</head>
+
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script id="load-script">
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                var loadScript = document.getElementById('load-script')
+                loadingMask.style.top = '-100vh'
+                setTimeout(function () {
+                    loadingMask.parentNode.removeChild(loadingMask);
+                    loadScript.parentNode.removeChild(loadScript);
+                }, 1000)
+            }
+        }
+    </script>
+    <header>
+      <ul>
+        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
+        <li ><a href="./fashionActivities.html">时尚活动</a></li>
+        <li ><a href="./fashionEducation.html">时尚教育</a></li>
+        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+        <li class="active"><a href="./characteristicService.html">特色服务</a></li>
+        <li ><a>设计大赛</a></li>
+        <li ><a href="./aboutUs.html">关于我们</a></li>
+      </ul>
+    </header>
+    <main id="characteristic-service">
+        <div class="banner">
+            <img class="lazyload" data-src="./images/characteristic-service_1.png" alt="" />
+            <div class="text">
+                <p>设计研发</p>
+                <h3>Design R&D</h3>
+            </div>
+        </div>
+        <div class="description">
+            <p>北服创新园作为中国最顶级的时尚创意创新平台<br>聚集了超过13000名来自全球的优秀设计人才<br>为行业及社会提供包括时尚产品、企业文化、政府形象、空间规划、视觉影响等在内的各类专业设计服务<br>服务的客户涵盖政府、企业、院校、社会团体以及其他相关组织和个人
+            </p>
+        </div>
+        <div class="switch-box">
+            <div class="switch-nav">
+                <div class="active">
+                    <h3>时尚产品设计</h3>
+                    <p>服装设计、配饰设计、鞋履设计、箱包设计</p>
+                    <p>企业文化产品设计、政府礼品设计</p>
+                    <div class="triangle"></div>
+                </div>
+                <div>
+                    <h3>环境与艺术设计</h3>
+                    <p>时尚园区规划、公共艺术设计、店面设计</p>
+                    <p>导示系统设计、环境视觉设计</p>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+            <div class="switch-content" style="display: block;">
+                <div class="content">
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_1.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_2.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_3.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_4.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_5.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_6.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="switch-content">
+                <div class="content">
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_1.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_2.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_3.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_4.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_5.png" alt="" />
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/designRD_6.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="top">
+        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
+        <div class="about-us">
+          <h3>联系我们</h3>
+          <div>
+            <div>
+              <p>媒体合作</p>
+              <p>Email:</p>
+              <p style="color: #fff">yueyang@biftpark.com</p>
+            </div>
+            <div>
+              <p>业务合作</p>
+              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
+              <p>传真号码 Fax: (010) 64520943</p>
+              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+        <p>京ICP备18000308号-1</p>
+      </div>
+    </footer>
+
+    <script src="./js/lazysizes.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".switch-nav > div").on("click", function () {
+                var index = $(this).index();
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(".switch-content")
+                    .hide()
+                    .eq(index)
+                    .show();
+            });
+        });
+    </script>
+</body>
+
+</html>

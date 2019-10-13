@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>高级定制</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/characteristic.css" />
+</head>
+
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script id="load-script">
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                var loadScript = document.getElementById('load-script')
+                loadingMask.style.top = '-100vh'
+                setTimeout(function () {
+                    loadingMask.parentNode.removeChild(loadingMask);
+                    loadScript.parentNode.removeChild(loadScript);
+                }, 1000)
+            }
+        }
+    </script>
+    <header>
+      <ul>
+        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
+        <li ><a href="./fashionActivities.html">时尚活动</a></li>
+        <li ><a href="./fashionEducation.html">时尚教育</a></li>
+        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+        <li class="active"><a href="./characteristicService.html">特色服务</a></li>
+        <li ><a>设计大赛</a></li>
+        <li ><a href="./aboutUs.html">关于我们</a></li>
+      </ul>
+    </header>
+    <main id="characteristic-service">
+        <div class="banner">
+            <img class="lazyload" data-src="./images/characteristic-service_1.png" alt="" />
+            <div class="text">
+                <p>高级定制</p>
+                <h3>Haute-Couture</h3>
+            </div>
+        </div>
+        <div class="poster">
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_1.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>男装</h3>
+                    <p>MENSWEAR</p>
+                </div>
+            </div>
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_2.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>新中装</h3>
+                    <p>NEW CHINESE TUNICSUIT</p>
+                </div>
+            </div>
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_3.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>饰品</h3>
+                    <p>ACCESESSORIES</p>
+                </div>
+            </div>
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_4.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>旗袍</h3>
+                    <p>CHEONGSAM</p>
+                </div>
+            </div>
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_5.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>京绣</h3>
+                    <p>PEKING EMBROIDERY</p>
+                </div>
+            </div>
+            <div>
+                <img class="lazyload" data-src="./images/hauteCouture_6.png" alt="">
+                <div class="mask-desc p-center">
+                    <h3>金工</h3>
+                    <p>METALWORKING</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="top">
+        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
+        <div class="about-us">
+          <h3>联系我们</h3>
+          <div>
+            <div>
+              <p>媒体合作</p>
+              <p>Email:</p>
+              <p style="color: #fff">yueyang@biftpark.com</p>
+            </div>
+            <div>
+              <p>业务合作</p>
+              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
+              <p>传真号码 Fax: (010) 64520943</p>
+              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+        <p>京ICP备18000308号-1</p>
+      </div>
+    </footer>
+
+    <script src="./js/lazysizes.min.js"></script>
+</body>
+
+</html>

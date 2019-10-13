@@ -97,7 +97,7 @@
               font-size: 20px;
               color: #737373;
               line-height: 45px;
-              transition: all .3s;
+              transition: all 0.3s;
             }
             .desc-sign {
               position: absolute;
@@ -223,7 +223,7 @@
     }
   }
 }
-@media (min-width: 750px) and (max-width: 1268px) {
+@media (min-width: 1120px) and (max-width: 1268px) {
   #about-us {
     .banner {
       .title {
@@ -258,6 +258,22 @@
                 font-size: 14px;
                 line-height: 28px;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 751px) and (max-width: 1119px) {
+  #about-us {
+    .content-wrap {
+      .info-list {
+        .item {
+          .description {
+            .desc-txt {
+              font-size: 12px;
+              line-height: 20px;
             }
           }
         }

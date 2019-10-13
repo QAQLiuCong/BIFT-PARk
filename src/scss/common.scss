@@ -103,11 +103,12 @@ video::-webkit-media-controls-enclosure {
 .loading {
   position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   z-index: 1000;
   background: #fff;
+  transition: top 0.5s ease-in-out;
   .loading-img {
     height: 100vh;
     display: flex;
@@ -168,6 +169,9 @@ footer {
       font-size: 22px;
       color: #dbdbdb;
       line-height: 1;
+      a {
+        color: #dbdbdb;
+      }
     }
     .about-us {
       margin-top: 45px;

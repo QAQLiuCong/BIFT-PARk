@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>时尚传播</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/characteristic.css" />
+</head>
+
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script id="load-script">
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                var loadScript = document.getElementById('load-script')
+                loadingMask.style.top = '-100vh'
+                setTimeout(function () {
+                    loadingMask.parentNode.removeChild(loadingMask);
+                    loadScript.parentNode.removeChild(loadScript);
+                }, 1000)
+            }
+        }
+    </script>
+    <header>
+      <ul>
+        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
+        <li ><a href="./fashionActivities.html">时尚活动</a></li>
+        <li ><a href="./fashionEducation.html">时尚教育</a></li>
+        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+        <li class="active"><a href="./characteristicService.html">特色服务</a></li>
+        <li ><a>设计大赛</a></li>
+        <li ><a href="./aboutUs.html">关于我们</a></li>
+      </ul>
+    </header>
+    <main id="characteristic-service">
+        <div class="banner">
+            <img class="lazyload" data-src="./images/characteristic-service_1.png" alt="" />
+            <div class="text">
+                <p>时尚传播</p>
+                <h3>Fashion Communication</h3>
+            </div>
+        </div>
+        <div class="description">
+            <p>北服创新园作为中国最先锋的专业时尚机构<br>自成立以来就通过组织和承办时尚发布、专业论坛、设计大赛、会展活动和时装周等各种形式的时尚活动<br>深度参与了包括中国国际时装周、上海时装周、北京国际设计周、青岛世界大学生时尚设计大赛等在内的一系列中国最具影响力的时尚事件<br>与诸多国内国际知名品牌、设计师原创品牌、专业媒体和地方政府以及行业协会建立了长期战略合作
+            </p>
+        </div>
+        <div class="tabs">
+            <div class="tabs-nav">
+                <div class="active">
+                    <h3>品牌与VI设计</h3>
+                    <div>
+                        <p>品牌标志设计、吉祥物设计</p>
+                        <p>VI系统设计</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>品牌传播</h3>
+                    <div>
+                        <p>媒体公关与执行</p>
+                        <p>网络营销策划与执行</p>
+                        <p>网红邀约与直播</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>视听识别设计</h3>
+                    <div>
+                        <p>宣传片、形象片</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>营销物料设计</h3>
+                    <div>
+                        <p>品牌画册设计</p>
+                        <p>包装设计</p>
+                        <p>其它物料设计</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>活动策划与执行</h3>
+                    <div>
+                        <p>大赛、论坛、庆典</p>
+                        <p>时尚发布</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-content">
+                <div class="content">
+                    <div>
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_2.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div>
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_2.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div>
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_2.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_3.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_4.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_2.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div>
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="lazyload" data-src="./images/fashionCommunication_5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="top">
+        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
+        <div class="about-us">
+          <h3>联系我们</h3>
+          <div>
+            <div>
+              <p>媒体合作</p>
+              <p>Email:</p>
+              <p style="color: #fff">yueyang@biftpark.com</p>
+            </div>
+            <div>
+              <p>业务合作</p>
+              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
+              <p>传真号码 Fax: (010) 64520943</p>
+              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+        <p>京ICP备18000308号-1</p>
+      </div>
+    </footer>
+
+    <script src="./js/lazysizes.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".tabs-nav > div").on("click", function () {
+                var index = $(this).index();
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(".tabs-content .content")
+                    .hide()
+                    .eq(index)
+                    .show();
+            });
+        });
+    </script>
+</body>
+
+</html>

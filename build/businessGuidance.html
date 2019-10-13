@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>创业指导</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/education.css" />
+</head>
+
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-img">
+            <img src="../images/loading.gif" alt="">
+        </div>
+    </div>
+    <script id="load-script">
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loading');
+                var loadScript = document.getElementById('load-script')
+                loadingMask.style.top = '-100vh'
+                setTimeout(function () {
+                    loadingMask.parentNode.removeChild(loadingMask);
+                    loadScript.parentNode.removeChild(loadScript);
+                }, 1000)
+            }
+        }
+    </script>
+    <header>
+      <ul>
+        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
+        <li ><a href="./fashionActivities.html">时尚活动</a></li>
+        <li class="active"><a href="./fashionEducation.html">时尚教育</a></li>
+        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+        <li ><a href="./characteristicService.html">特色服务</a></li>
+        <li ><a>设计大赛</a></li>
+        <li ><a href="./aboutUs.html">关于我们</a></li>
+      </ul>
+    </header>
+    <main id="education">
+        <div class="banner">
+            <div class="swiper-container banner-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <!-- <img class="swiper-lazy lazyload" data-src="./images/fashion-activities_1.png" alt="" /> -->
+                            <div>
+                                <span>创业指导</span>
+                                <p>Entrepreneurial Guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <img class="swiper-lazy lazyload" data-src="./images/fashion-activities_1.png" alt="" />
+                        <div class="text">
+                             <div>
+                                <span>创业指导</span>
+                                <p>Entrepreneurial Guidance</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="business-management module">
+                <h3 class="title">
+                    管理精研<span class="split"></span><em>Business Management</em>
+                </h3>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_43.png" alt="" />
+                        </div>
+                        <p>创业企业人才的选用育留</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_44.png" alt="" />
+                        </div>
+                        <p>小微企业法务问题分析</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_45.png" alt="" />
+                        </div>
+                        <p>创业企业员工如何激励</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_46.png" alt="" />
+                        </div>
+                        <p>创业企业员工如何激励</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_47.png" alt="" />
+                        </div>
+                        <p>初创时尚品牌的商品管理</p>
+                    </div>
+                    <div>
+                        <div>
+                            <span>待续</span>
+                        </div>
+                        <p>待续</p>
+                    </div>
+                </div>
+            </div>
+            <div class="practical-training module">
+                <h3 class="title">
+                    实战经验<span class="split"></span><em>Practical Training</em>
+                </h3>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_48.png" alt="" />
+                        </div>
+                        <p>时尚企业的用户思维</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_49.png" alt="" />
+                        </div>
+                        <p>创新思维与商业模式</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_50.png" alt="" />
+                        </div>
+                        <p>社交营销与社群粉丝</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_35.png" alt="" />
+                        </div>
+                        <p>卖点提炼与文案表达</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_51.png" alt="" />
+                        </div>
+                        <p>融媒体时代的精准营销</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="./images/education_52.png" alt="" />
+                        </div>
+                        <p>时尚买手</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lectures module">
+                <h3 class="title">
+                    大师讲座<span class="split"></span><em>Lectures</em>
+                </h3>
+                <div class="module-img">
+                    <img class="lazyload" data-src="./images/education_53.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="top">
+        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
+        <div class="about-us">
+          <h3>联系我们</h3>
+          <div>
+            <div>
+              <p>媒体合作</p>
+              <p>Email:</p>
+              <p style="color: #fff">yueyang@biftpark.com</p>
+            </div>
+            <div>
+              <p>业务合作</p>
+              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
+              <p>传真号码 Fax: (010) 64520943</p>
+              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+        <p>京ICP备18000308号-1</p>
+      </div>
+    </footer>
+
+    <script src="./js/lazysizes.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            var slideChild = $(".banner-swiper").find(".swiper-slide").length;
+            new Swiper($(".banner-swiper"), {
+                speed: 600,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+                loop: slideChild > 1,
+                observer: true,
+                observeParents: true,
+                lazy: {
+                    loadPrevNext: true
+                },
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

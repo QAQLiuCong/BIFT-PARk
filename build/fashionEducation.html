@@ -18,14 +18,19 @@
             <img src="../images/loading.gif" alt="">
         </div>
     </div>
-    <script>
+    <script id="load-script">
         //监听加载状态改变
         document.onreadystatechange = completeLoading;
         //加载状态为complete时移除loading效果
         function completeLoading() {
             if (document.readyState == "complete") {
                 var loadingMask = document.getElementById('loading');
-                loadingMask.parentNode.removeChild(loadingMask);
+                var loadScript = document.getElementById('load-script')
+                loadingMask.style.top = '-100vh'
+                setTimeout(function () {
+                    loadingMask.parentNode.removeChild(loadingMask);
+                    loadScript.parentNode.removeChild(loadScript);
+                }, 1000)
             }
         }
     </script>
@@ -82,41 +87,51 @@
                             </div>
                         </div>
                         <div class="row-item">
-                            <img class="lazyload" data-src="./images/fashion-education_3.png" alt="">
-                            <div class="p-center mask-desc">
-                                <h3>少儿美育</h3>
-                                <p>Children's Aesthetic Education</p>
-                            </div>
+                            <a href="beautyEducation.html">
+                                <img class="lazyload" data-src="./images/fashion-education_3.png" alt="">
+                                <div class="p-center mask-desc">
+                                    <h3>少儿美育</h3>
+                                    <p>Children's Aesthetic Education</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="row-item">
-                            <img class="lazyload" data-src="./images/fashion-education_4.png" alt="">
-                            <div class="p-center mask-desc">
-                                <h3>艺术求学</h3>
-                                <p>Preparation For Study Abroad</p>
-                            </div>
+                            <a href="artStudy.html">
+                                <img class="lazyload" data-src="./images/fashion-education_4.png" alt="">
+                                <div class="p-center mask-desc">
+                                    <h3>艺术求学</h3>
+                                    <p>Preparation For Study Abroad</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="row-item">
-                            <img class="lazyload" data-src="./images/fashion-education_5.png" alt="">
-                            <div class="p-center mask-desc">
-                                <h3>产业培训</h3>
-                                <p>Industry Training</p>
-                            </div>
+                            <a href="industrialTraining.html">
+                                <img class="lazyload" data-src="./images/fashion-education_5.png" alt="">
+                                <div class="p-center mask-desc">
+                                    <h3>产业培训</h3>
+                                    <p>Industry Training</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="row-item">
-                            <img class="lazyload" data-src="./images/fashion-education_6.png" alt="">
-                            <div class="p-center mask-desc">
-                                <h3>创业指导</h3>
-                                <p>Entrepreneurial Guidance</p>
-                            </div>
+                            <a href="businessGuidance.html">
+                                <img class="lazyload" data-src="./images/fashion-education_6.png" alt="">
+                                <div class="p-center mask-desc">
+                                    <h3>创业指导</h3>
+                                    <p>Entrepreneurial Guidance</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="row-item">
-                            <img class="lazyload" data-src="./images/fashion-education_7.png" alt="">
-                            <div class="p-center mask-desc">
-                                <h3>大众美学</h3>
-                                <p>Mass Aesthetics</p>
-                            </div>
+                            <a href="massAesthetics.html">
+                                <img class="lazyload" data-src="./images/fashion-education_7.png" alt="">
+                                <div class="p-center mask-desc">
+                                    <h3>大众美学</h3>
+                                    <p>Mass Aesthetics</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -235,7 +250,7 @@
     </main>
     <footer>
       <div class="top">
-        <h4>北京服装学院官网</h4>
+        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
         <div class="about-us">
           <h3>联系我们</h3>
           <div>

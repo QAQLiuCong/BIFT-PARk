@@ -36,7 +36,7 @@
 
 #about-us .content-wrap .park-info .info-list .item .description { position: relative; display: flex; align-items: center; }
 
-#about-us .content-wrap .park-info .info-list .item .description .desc-txt { padding: 0 5%; font-size: 20px; color: #737373; line-height: 45px; transition: all .3s; }
+#about-us .content-wrap .park-info .info-list .item .description .desc-txt { padding: 0 5%; font-size: 20px; color: #737373; line-height: 45px; transition: all 0.3s; }
 
 #about-us .content-wrap .park-info .info-list .item .description .desc-sign { position: absolute; color: #000; font-size: 12px; display: flex; align-items: center; justify-content: flex-end; bottom: 20px; width: 100%; }
 
@@ -59,9 +59,11 @@
   #about-us .content-wrap .park-info .info-title i { width: 18vw; }
   #about-us .content-wrap .park-info .info-list .item .description .desc-txt { font-size: 16px; line-height: 30px; } }
 
-@media (min-width: 750px) and (max-width: 1268px) { #about-us .banner .title { font-size: 42px; }
+@media (min-width: 1120px) and (max-width: 1268px) { #about-us .banner .title { font-size: 42px; }
   #about-us .banner .title .split { width: 16px; height: 34px; background: #fff; display: inline-block; transform: skewX(-40deg); margin: 0 45px; }
   #about-us .content-wrap .top-txt { font-size: 16px; padding: 7vh 0; }
   #about-us .content-wrap .park-info .info-title { font-size: 24px; letter-spacing: 16px; }
   #about-us .content-wrap .park-info .info-title i { width: 18vw; }
   #about-us .content-wrap .park-info .info-list .item .description .desc-txt { font-size: 14px; line-height: 28px; } }
+
+@media (min-width: 751px) and (max-width: 1119px) { #about-us .content-wrap .info-list .item .description .desc-txt { font-size: 12px; line-height: 20px; } }

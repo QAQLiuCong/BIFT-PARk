@@ -12,7 +12,7 @@
 
 #fashion-activities .banner .swiper-container .text p { color: #fff; font-size: 60px; }
 
-#fashion-activities .banner .swiper-container .swiper-button-next, #fashion-activities .banner .swiper-container .swiper-button-prev { z-index: 20; color: #ccc; padding: 8px; width: 45px; height: 45px; transition: all .3s; }
+#fashion-activities .banner .swiper-container .swiper-button-next, #fashion-activities .banner .swiper-container .swiper-button-prev { z-index: 20; color: #ccc; padding: 8px; width: 45px; height: 45px; transition: all 0.3s; }
 
 #fashion-activities .banner .swiper-container .swiper-button-next:hover, #fashion-activities .banner .swiper-container .swiper-button-prev:hover { color: #fff; background: rgba(0, 0, 0, 0.2); }
 
@@ -32,5 +32,7 @@
 
 #fashion-activities .plate img { width: 100%; vertical-align: middle; }
 
-@media (min-width: 750px) and (max-width: 1400px) { #fashion-activities .plate > div .text h3 { font-size: 24px; }
+@media (min-width: 1000px) and (max-width: 1400px) { #fashion-activities .banner { height: 100vh; position: relative; }
+  #fashion-activities .banner .swiper-container .text p { font-size: 42px; }
+  #fashion-activities .plate > div .text h3 { font-size: 24px; }
   #fashion-activities .plate > div .text p { font-size: 16px; } }

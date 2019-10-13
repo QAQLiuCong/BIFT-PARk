@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>美儿教育</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="@@webRoot/css/common.css" />
+    <link rel="stylesheet" href="@@webRoot/css/swiper.css" />
+    <link rel="stylesheet" href="@@webRoot/css/education.css" />
+</head>
+
+<body>
+    @@include('@@webRoot/template/loading.html')
+    @@include('@@webRoot/template/header.html', {"active": "fashionEducation"})
+    <main id="education">
+        <div class="banner">
+            <div class="swiper-container banner-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="text">
+                            <!-- <img class="swiper-lazy lazyload" data-src="@@webRoot/images/fashion-activities_1.png" alt="" /> -->
+                            <div>
+                                <span>少儿美育</span>
+                                <p>Children's Aesthetic Education</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <img class="swiper-lazy lazyload" data-src="@@webRoot/images/fashion-activities_1.png" alt="" />
+                        <div class="text">
+                            <div>
+                                <span>少儿美育</span>
+                                <p>Children's Aesthetic Education</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="normal-classes module">
+                <h3 class="title">
+                    平日班<span class="split"></span><em>Normal Classes</em>
+                </h3>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_1.png" alt="" />
+                        </div>
+                        <p>彩铅养成</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_2.png" alt="" />
+                        </div>
+                        <p>动画基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_3.png" alt="" />
+                        </div>
+                        <p>素描基础</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_4.png" alt="" />
+                        </div>
+                        <p>油画基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_5.png" alt="" />
+                        </div>
+                        <p>书法基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_6.png" alt="" />
+                        </div>
+                        <p>花艺基础</p>
+                    </div>
+                </div>
+            </div>
+            <div class="summer-camp module">
+                <h3 class="title">
+                    夏令营<span class="split"></span><em>Summer Camp</em>
+                </h3>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_1.png" alt="" />
+                        </div>
+                        <p>彩铅养成</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_2.png" alt="" />
+                        </div>
+                        <p>动画基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_3.png" alt="" />
+                        </div>
+                        <p>素描基础</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_4.png" alt="" />
+                        </div>
+                        <p>油画基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_5.png" alt="" />
+                        </div>
+                        <p>书法基础</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img class="lazyload" data-src="@@webRoot/images/education_6.png" alt="" />
+                        </div>
+                        <p>花艺基础</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('@@webRoot/template/footer.html')
+    <script src="@@webRoot/js/lazysizes.min.js"></script>
+    <script src="@@webRoot/js/jquery.min.js"></script>
+    <script src="@@webRoot/js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            var slideChild = $(".banner-swiper").find(".swiper-slide").length;
+            new Swiper($(".banner-swiper"), {
+                speed: 600,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+                loop: slideChild > 1,
+                observer: true,
+                observeParents: true,
+                lazy: {
+                    loadPrevNext: true
+                },
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
