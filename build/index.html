@@ -45,17 +45,54 @@
       <li ><a href="./aboutUs.html">关于我们</a></li>
     </ul>
   </header>
+  <script>
+  const debounce = function(idle, action) {
+    let last
+    return function() {
+      const ctx = this, args = arguments
+      clearTimeout(last)
+      last = setTimeout(function() {
+        action.apply(ctx, args)
+      }, idle)
+    }
+  }
+
+  window.addEventListener('scroll', debounce(50, function(e) {
+      let scrollY = 0
+      if (window.scrollY) {
+          scrollY = window.scrollY
+      } else {
+          scrollY = $(document).scrollTop()
+      }
+      if (scrollY < 50) {
+          return $('header').stop().slideDown('fast')
+      }
+      e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
+      e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
+      let direction = 'down'
+      if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
+          direction = 'up'
+      }
+      if (e.target.scrollTopPosition > 0) {
+          if (direction === 'down') {
+              $('header').stop().slideUp('fast')
+          } else {
+              $('header').stop().slideDown('fast')
+          }
+      }
+  }))
+  </script>
   <main id="home">
     <section class="section module1" id="section1">
       <div class="bg"></div>
-      <!-- <div class="pc-video-page">
+      <div class="pc-video-page">
         <div class="video-container">
           <video width="100%" controls="controls" controlslist="nodownload" id="home-video">
             <source
-              src="http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"
+              src="http://vd2.bdstatic.com/mda-ie3t0aftba4umnj4/sc/mda-ie3t0aftba4umnj4.mp4"
               type="video/mp4"></video>
         </div>
-      </div> -->
+      </div>
     </section>
     <section class="section module2" id="section2">
       <a href="aboutUs.html">

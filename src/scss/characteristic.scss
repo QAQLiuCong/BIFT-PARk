@@ -55,56 +55,77 @@
   }
   .switch-box {
     .switch-nav {
-      display: flex;
       height: 50vh;
       overflow: hidden;
-      > div {
-        position: relative;
-        flex: 1;
+      position: relative;
+      .triangle {
+        div {
+          position: absolute;
+          z-index: -1;
+        }
+        .l-triangle {
+          bottom: 0;
+          left: 0;
+          border-bottom: 25.5vh solid #fff;
+          border-right: 25vw solid transparent;
+          &.active {
+            border-bottom-color: #262626;
+          }
+        }
+        .r-triangle {
+          top: 0;
+          right: 0;
+          border-top: 25.5vh solid #fff;
+          border-left: 25vw solid transparent;
+          &.active {
+            border-top-color: #262626;
+          }
+        }
+      }
+      .nav-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        background: #fff;
-        transform: skewX(45deg);
-        &:first-child {
-          .triangle {
-            bottom: 0;
-            left: -12.5%;
-            border-bottom: 25.5vh solid #fff;
-            border-right: 12.5vw solid transparent;
+        div {
+          flex: 1;
+          color: #000;
+          height: 100%;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &.active {
+            color: #fff;
+          }
+          h3 {
+            font-size: 60px;
+            line-height: 1;
+            font-weight: 400;
+            margin-bottom: 5vh;
+          }
+          p {
+            font-size: 24px;
+            line-height: 58px;
           }
         }
-        &:last-child {
-          .triangle {
-            top: 0;
-            right: -12.5%;
-            border-top: 25.5vh solid #fff;
-            border-left: 12.5vw solid transparent;
-          }
-        }
-        .triangle {
-          position: absolute;
-          transform: skewX(-45deg);
-          z-index: -1;
-        }
-        h3 {
-          font-size: 60px;
-          line-height: 1;
-          font-weight: 400;
-          margin-bottom: 5vh;
-          transform: skewX(-45deg);
-        }
-        p {
-          font-size: 24px;
-          line-height: 58px;
-          transform: skewX(-45deg);
-        }
-        &.active {
-          color: #fff;
-          background: #262626;
-          .triangle {
-            border-color: #262626;
+      }
+      .nav-btn {
+        display: flex;
+        height: 100%;
+        .left,
+        .right {
+          flex: 1;
+          transform: skewX(30deg);
+          &.active {
+            color: #fff;
+            background: #262626;
           }
         }
       }
@@ -256,7 +277,7 @@
           }
         }
         h3 {
-          font-size: 40px;
+          font-size: 36px;
           line-height: 1;
           font-weight: 400;
           transform: skewX(-25deg);
@@ -288,6 +309,7 @@
           flex: 1;
           height: 90vh;
           background: #fff url("../images/logo-bg.png") no-repeat center center;
+          background-size: 80%;
           img {
             width: 100%;
             height: 100%;
@@ -327,39 +349,33 @@
     }
     .switch-box {
       .switch-nav {
-        height: 50vh;
-        > div {
-          &:first-child {
-            .triangle {
-              left: -14%;
-              border-bottom: 25.5vh solid #fff;
-              border-right: 13.5vw solid transparent;
+        height: 45vh;
+        .triangle {
+          .l-triangle {
+            border-bottom: 25.5vh solid #fff;
+            border-right: 25vw solid transparent;
+          }
+          .r-triangle {
+            border-top: 25.5vh solid #fff;
+            border-left: 25vw solid transparent;
+          }
+        }
+        .nav-text {
+          div {
+            h3 {
+              font-size: 40px;
+            }
+            p {
+              font-size: 20px;
+              line-height: 48px;
             }
           }
-          &:last-child {
-            .triangle {
-              right: -14%;
-              border-top: 25.5vh solid #fff;
-              border-left: 13.5vw solid transparent;
-            }
-          }
-          .triangle {
-            position: absolute;
-            transform: skewX(-45deg);
-          }
-          h3 {
-            font-size: 40px;
-          }
-          p {
-            font-size: 20px;
-            line-height: 36px;
-          }
-          &.active {
-            color: #fff;
-            background: #262626;
-            .triangle {
-              border-color: #262626;
-            }
+        }
+      }
+      .switch-content {
+        div.content {
+          div {
+            height: 70vh;
           }
         }
       }
@@ -425,7 +441,7 @@
         height: 50vh;
         > div {
           h3 {
-            font-size: 32px;
+            font-size: 30px;
             margin-top: 8vh;
           }
           h3 + div {

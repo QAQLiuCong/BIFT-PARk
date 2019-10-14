@@ -36,6 +36,7 @@
       justify-content: space-between;
       align-items: center;
       .info {
+        flex: 1;
         > div {
           display: flex;
           align-items: baseline;

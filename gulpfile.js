@@ -91,11 +91,11 @@ exports.styles = styles;
 function images() {
     return src( [config.paths.image+'/**/*','!'+config.paths.image+'/sprite/*'] )
         .pipe( config.isDev ? changed( config.pathsDev.html ) : gutil.noop() )
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngquant()]
+        // }))
         .pipe(dest( config.pathsDev.image ))
         .pipe(connect.reload())
 };

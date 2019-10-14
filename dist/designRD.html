@@ -44,6 +44,43 @@
         <li ><a href="./aboutUs.html">关于我们</a></li>
       </ul>
     </header>
+    <script>
+    var debounce = function(idle, action) {
+      var last
+      return function() {
+        var ctx = this, args = arguments
+        clearTimeout(last)
+        last = setTimeout(function() {
+          action.apply(ctx, args)
+        }, idle)
+      }
+    }
+
+    window.addEventListener('scroll', debounce(50, function(e) {
+        var scrollY = 0
+        if (window.scrollY) {
+            scrollY = window.scrollY
+        } else {
+            scrollY = $(document).scrollTop()
+        }
+        if (scrollY < 50) {
+            return $('header').stop().slideDown('fast')
+        }
+        e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
+        e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
+        var direction = 'down'
+        if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
+            direction = 'up'
+        }
+        if (e.target.scrollTopPosition > 0) {
+            if (direction === 'down') {
+                $('header').stop().slideUp('fast')
+            } else {
+                $('header').stop().slideDown('fast')
+            }
+        }
+    }))
+    </script>
     <main id="characteristic-service">
         <div class="banner">
             <img class="lazyload" data-src="./images/characteristic-service_1.png" alt="" />
@@ -58,17 +95,27 @@
         </div>
         <div class="switch-box">
             <div class="switch-nav">
-                <div class="active">
-                    <h3>时尚产品设计</h3>
-                    <p>服装设计、配饰设计、鞋履设计、箱包设计</p>
-                    <p>企业文化产品设计、政府礼品设计</p>
-                    <div class="triangle"></div>
+                <div class="nav-text">
+                    <div class="left active">
+                        <h3>时尚产品设计</h3>
+                        <p>服装设计、配饰设计、鞋履设计、箱包设计</p>
+                        <p>企业文化产品设计、政府礼品设计</p>
+                    </div>
+                    <div class="right">
+                        <h3>环境与艺术设计</h3>
+                        <p>时尚园区规划、公共艺术设计、店面设计</p>
+                        <p>导示系统设计、环境视觉设计</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>环境与艺术设计</h3>
-                    <p>时尚园区规划、公共艺术设计、店面设计</p>
-                    <p>导示系统设计、环境视觉设计</p>
-                    <div class="triangle"></div>
+                <div class="nav-btn">
+                    <div class="active left">
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+                <div class="triangle">
+                    <div class="active l-triangle"></div>
+                    <div class="r-triangle"></div>
                 </div>
             </div>
             <div class="switch-content" style="display: block;">
@@ -147,16 +194,12 @@
     <script src="./js/jquery.min.js"></script>
     <script>
         $(function () {
-            $(".switch-nav > div").on("click", function () {
+            $(".switch-nav .nav-text").on("click", 'div', function () {
                 var index = $(this).index();
-                $(this)
-                    .addClass("active")
-                    .siblings()
-                    .removeClass("active");
-                $(".switch-content")
-                    .hide()
-                    .eq(index)
-                    .show();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.triangle div').eq(index).addClass('active').siblings().removeClass('active');
+                $('.nav-btn div').eq(index).addClass('active').siblings().removeClass('active');
+                $(".switch-content").hide().eq(index).show();
             });
         });
     </script>

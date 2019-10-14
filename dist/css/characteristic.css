@@ -20,23 +20,33 @@
 
 #characteristic-service .description p { font-size: 24px; text-align: center; color: #000; line-height: 58px; width: 88%; margin: 0 auto; }
 
-#characteristic-service .switch-box .switch-nav { display: flex; height: 50vh; overflow: hidden; }
+#characteristic-service .switch-box .switch-nav { height: 50vh; overflow: hidden; position: relative; }
 
-#characteristic-service .switch-box .switch-nav > div { position: relative; flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; background: #fff; transform: skewX(45deg); }
+#characteristic-service .switch-box .switch-nav .triangle div { position: absolute; z-index: -1; }
 
-#characteristic-service .switch-box .switch-nav > div:first-child .triangle { bottom: 0; left: -12.5%; border-bottom: 25.5vh solid #fff; border-right: 12.5vw solid transparent; }
+#characteristic-service .switch-box .switch-nav .triangle .l-triangle { bottom: 0; left: 0; border-bottom: 25.5vh solid #fff; border-right: 25vw solid transparent; }
 
-#characteristic-service .switch-box .switch-nav > div:last-child .triangle { top: 0; right: -12.5%; border-top: 25.5vh solid #fff; border-left: 12.5vw solid transparent; }
+#characteristic-service .switch-box .switch-nav .triangle .l-triangle.active { border-bottom-color: #262626; }
 
-#characteristic-service .switch-box .switch-nav > div .triangle { position: absolute; transform: skewX(-45deg); z-index: -1; }
+#characteristic-service .switch-box .switch-nav .triangle .r-triangle { top: 0; right: 0; border-top: 25.5vh solid #fff; border-left: 25vw solid transparent; }
 
-#characteristic-service .switch-box .switch-nav > div h3 { font-size: 60px; line-height: 1; font-weight: 400; margin-bottom: 5vh; transform: skewX(-45deg); }
+#characteristic-service .switch-box .switch-nav .triangle .r-triangle.active { border-top-color: #262626; }
 
-#characteristic-service .switch-box .switch-nav > div p { font-size: 24px; line-height: 58px; transform: skewX(-45deg); }
+#characteristic-service .switch-box .switch-nav .nav-text { position: absolute; top: 0; left: 0; z-index: 3; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
 
-#characteristic-service .switch-box .switch-nav > div.active { color: #fff; background: #262626; }
+#characteristic-service .switch-box .switch-nav .nav-text div { flex: 1; color: #000; height: 100%; display: flex; width: 100%; flex-direction: column; align-items: center; justify-content: center; }
 
-#characteristic-service .switch-box .switch-nav > div.active .triangle { border-color: #262626; }
+#characteristic-service .switch-box .switch-nav .nav-text div.active { color: #fff; }
+
+#characteristic-service .switch-box .switch-nav .nav-text div h3 { font-size: 60px; line-height: 1; font-weight: 400; margin-bottom: 5vh; }
+
+#characteristic-service .switch-box .switch-nav .nav-text div p { font-size: 24px; line-height: 58px; }
+
+#characteristic-service .switch-box .switch-nav .nav-btn { display: flex; height: 100%; }
+
+#characteristic-service .switch-box .switch-nav .nav-btn .left, #characteristic-service .switch-box .switch-nav .nav-btn .right { flex: 1; transform: skewX(30deg); }
+
+#characteristic-service .switch-box .switch-nav .nav-btn .left.active, #characteristic-service .switch-box .switch-nav .nav-btn .right.active { color: #fff; background: #262626; }
 
 #characteristic-service .switch-box .switch-content { display: none; }
 
@@ -98,7 +108,7 @@
 
 #characteristic-service .tabs .tabs-nav > div.active::after { background: #262626; }
 
-#characteristic-service .tabs .tabs-nav > div h3 { font-size: 40px; line-height: 1; font-weight: 400; transform: skewX(-25deg); margin-top: 10vh; }
+#characteristic-service .tabs .tabs-nav > div h3 { font-size: 36px; line-height: 1; font-weight: 400; transform: skewX(-25deg); margin-top: 10vh; }
 
 #characteristic-service .tabs .tabs-nav > div h3 + div { margin-top: 8vh; display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 20vh; }
 
@@ -108,7 +118,7 @@
 
 #characteristic-service .tabs .tabs-content .content { display: flex; }
 
-#characteristic-service .tabs .tabs-content .content div { flex: 1; height: 90vh; background: #fff url("../images/logo-bg.png") no-repeat center center; }
+#characteristic-service .tabs .tabs-content .content div { flex: 1; height: 90vh; background: #fff url("../images/logo-bg.png") no-repeat center center; background-size: 80%; }
 
 #characteristic-service .tabs .tabs-content .content div img { width: 100%; height: 100%; vertical-align: middle; }
 
@@ -117,14 +127,12 @@
   #characteristic-service .banner .text h3 { font-size: 36px; }
   #characteristic-service .description { padding: 11vh 0; }
   #characteristic-service .description p { font-size: 20px; line-height: 40px; }
-  #characteristic-service .switch-box .switch-nav { height: 50vh; }
-  #characteristic-service .switch-box .switch-nav > div:first-child .triangle { left: -14%; border-bottom: 25.5vh solid #fff; border-right: 13.5vw solid transparent; }
-  #characteristic-service .switch-box .switch-nav > div:last-child .triangle { right: -14%; border-top: 25.5vh solid #fff; border-left: 13.5vw solid transparent; }
-  #characteristic-service .switch-box .switch-nav > div .triangle { position: absolute; transform: skewX(-45deg); }
-  #characteristic-service .switch-box .switch-nav > div h3 { font-size: 40px; }
-  #characteristic-service .switch-box .switch-nav > div p { font-size: 20px; line-height: 36px; }
-  #characteristic-service .switch-box .switch-nav > div.active { color: #fff; background: #262626; }
-  #characteristic-service .switch-box .switch-nav > div.active .triangle { border-color: #262626; }
+  #characteristic-service .switch-box .switch-nav { height: 45vh; }
+  #characteristic-service .switch-box .switch-nav .triangle .l-triangle { border-bottom: 25.5vh solid #fff; border-right: 25vw solid transparent; }
+  #characteristic-service .switch-box .switch-nav .triangle .r-triangle { border-top: 25.5vh solid #fff; border-left: 25vw solid transparent; }
+  #characteristic-service .switch-box .switch-nav .nav-text div h3 { font-size: 40px; }
+  #characteristic-service .switch-box .switch-nav .nav-text div p { font-size: 20px; line-height: 48px; }
+  #characteristic-service .switch-box .switch-content div.content div { height: 70vh; }
   #characteristic-service .poster > div .p-center h3 { font-size: 36px; }
   #characteristic-service .poster > div .p-center p { font-size: 20px; }
   #characteristic-service .plan img { vertical-align: middle; width: 100%; }
@@ -137,6 +145,6 @@
   #characteristic-service .plan .multi-plan > div:hover .p-center { opacity: 1; }
   #characteristic-service .plan .multi-plan > div .p-center { justify-content: center; align-items: flex-end; font-size: 24px; color: #fff; opacity: 0; }
   #characteristic-service .tabs .tabs-nav { height: 50vh; }
-  #characteristic-service .tabs .tabs-nav > div h3 { font-size: 32px; margin-top: 8vh; }
+  #characteristic-service .tabs .tabs-nav > div h3 { font-size: 30px; margin-top: 8vh; }
   #characteristic-service .tabs .tabs-nav > div h3 + div { margin-top: 8vh; }
   #characteristic-service .tabs .tabs-nav > div p { margin-bottom: 25px; font-size: 20px; } }

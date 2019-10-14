@@ -18,6 +18,8 @@
 
 #enterprise-entry .r-content .r-item { display: flex; justify-content: space-between; align-items: center; }
 
+#enterprise-entry .r-content .r-item .info { flex: 1; }
+
 #enterprise-entry .r-content .r-item .info > div { display: flex; align-items: baseline; font-size: 22px; line-height: 1; margin-bottom: 22px; }
 
 #enterprise-entry .r-content .r-item .info > div:last-child { margin-bottom: 0; }
