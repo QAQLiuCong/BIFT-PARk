@@ -86,8 +86,9 @@
     <section class="section module1" id="section1">
       <div class="bg"></div>
       <div class="pc-video-page">
+        <div class="fake-nav"></div>
         <div class="video-container">
-          <video width="100%" controls="controls" controlslist="nodownload" id="home-video">
+          <video width="100%" playsinline webkit-playsinline loop muted="true" preload="none" autoplay controls="controls" controlslist="nodownload" id="home-video">
             <source src="http://vd2.bdstatic.com/mda-ie3t0aftba4umnj4/sc/mda-ie3t0aftba4umnj4.mp4" type="video/mp4">
             </video>
         </div>
@@ -309,11 +310,6 @@
         }
       }
     });
-    // window.onload = function() {
-    //   setTimeout(function(){
-    //     document.querySelector('.pc-video-page').style.display = 'block'
-    //   },3000)
-    // }
   </script>
 </body>
 

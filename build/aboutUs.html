@@ -14,7 +14,7 @@
 <body>
     <div id="loading" class="loading">
         <div class="loading-img">
-            <img src="../images/loading.gif" alt="">
+            <img src="./images/loading.gif" alt="">
         </div>
     </div>
     <script id="load-script">
@@ -34,52 +34,52 @@
         }
     </script>
     <header>
-      <ul>
-        <li ><a href="./enterpriseEntry.html">企业入驻</a></li>
-        <li ><a href="./fashionActivities.html">时尚活动</a></li>
-        <li ><a href="./fashionEducation.html">时尚教育</a></li>
-        <li  type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
-        <li ><a href="./characteristicService.html">特色服务</a></li>
-        <li ><a>设计大赛</a></li>
-        <li class="active"><a href="./aboutUs.html">关于我们</a></li>
-      </ul>
+        <ul>
+            <li><a href="./enterpriseEntry.html">企业入驻</a></li>
+            <li><a href="./fashionActivities.html">时尚活动</a></li>
+            <li><a href="./fashionEducation.html">时尚教育</a></li>
+            <li type="logo"><a href="./index.html"><img src="./images/logo.svg" alt=""></a></li>
+            <li><a href="./characteristicService.html">特色服务</a></li>
+            <li><a>设计大赛</a></li>
+            <li class="active"><a href="./aboutUs.html">关于我们</a></li>
+        </ul>
     </header>
     <script>
-    const debounce = function(idle, action) {
-      let last
-      return function() {
-        const ctx = this, args = arguments
-        clearTimeout(last)
-        last = setTimeout(function() {
-          action.apply(ctx, args)
-        }, idle)
-      }
-    }
-
-    window.addEventListener('scroll', debounce(50, function(e) {
-        let scrollY = 0
-        if (window.scrollY) {
-            scrollY = window.scrollY
-        } else {
-            scrollY = $(document).scrollTop()
-        }
-        if (scrollY < 50) {
-            return $('header').stop().slideDown('fast')
-        }
-        e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
-        e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
-        let direction = 'down'
-        if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
-            direction = 'up'
-        }
-        if (e.target.scrollTopPosition > 0) {
-            if (direction === 'down') {
-                $('header').stop().slideUp('fast')
-            } else {
-                $('header').stop().slideDown('fast')
+        var debounce = function (idle, action) {
+            var last
+            return function () {
+                var ctx = this, args = arguments
+                clearTimeout(last)
+                last = setTimeout(function () {
+                    action.apply(ctx, args)
+                }, idle)
             }
         }
-    }))
+
+        window.addEventListener('scroll', debounce(50, function (e) {
+            var scrollY = 0
+            if (window.scrollY) {
+                scrollY = window.scrollY
+            } else {
+                scrollY = $(document).scrollTop()
+            }
+            if (scrollY < 50) {
+                return $('header').stop().slideDown('fast')
+            }
+            e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
+            e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
+            var direction = 'down'
+            if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
+                direction = 'up'
+            }
+            if (e.target.scrollTopPosition > 0) {
+                if (direction === 'down') {
+                    $('header').stop().slideUp('fast')
+                } else {
+                    $('header').stop().slideDown('fast')
+                }
+            }
+        }))
     </script>
     <main id="about-us">
         <div class="banner">
@@ -87,55 +87,40 @@
         </div>
         <div class="content-wrap">
             <div class="top-txt">
-                <p>
-                    BIFT PARK
-                    于2012年3月由北京市人民政府与北京服装学院共建的“中关村科学城第四批签约项目
-                </p>
-                <p>北京服装学院服饰时尚设计产业创新园（简称中关村时尚产业创新园）</p>
-                <p>并由北京北服时尚投资管理中心负责运营管理。</p>
-                <p>
-                    总面积占地10000平方米的BIFTPARK中关村时尚产业创新园，毗邻美丽的元大都城垣遗址公园，是在京高校签约中关村科学城7个文化产业项目中，唯一的服饰时尚设计产业园。
-                </p>
-                <p>
-                    园区将打造成为全球知名的青年设计师聚集中心助力北京乃至全国时尚创意产业的蓬勃发展。
-                </p>
+                <p>北服创新园肩负着为设计师发展和创新创业提供最优服务的使命，致力于成为全球产教融合的最佳典范<br>通过与中国各时尚城市与产业聚集地的深度融合<br>北服创新园聚集了中国最优秀的面辅料企业、生产制造企业和商业流通企业等产业资源，与各级政府和行业协会、时尚院校以及专业展会等保持密切合作<br>通过不懈努力，北服创新园先后被科技部认定为“国家级众创空间”<br>工信部认定为“纺织服装创意设计试点示范园区”<br>中关村管委会认定为“中关村创新型孵化器”
+                    、“海归人才创业园”，中纺联认定为“十大产业园区” 并获得了北京、江苏、浙江、河北等各级政府授予的省市区级“众创空间”、“创新创业示范基地”、“文化创意产业人才培养基地”等数十个荣誉称号和资质</p>
             </div>
             <div class="park-info">
-                <div class="info-title"><i></i>BIFT PARK Sub Park<i></i></div>
+                <div class="info-title"><i></i>核心功能<i></i></div>
                 <div class="info-list">
                     <div class="item">
                         <div class="poster">
-                            <img src="./images/about-us_2.png" alt="" />
+                            <img src="./images/about-us_5.png" alt="" />
                             <div class="mask-desc p-center">
-                                <h3>青年设计师聚焦</h3>
-                                <p>Young Designers Gathering</p>
+                                <h3>设计师聚集</h3>
+                                <p>Designers Gathering</p>
                             </div>
                         </div>
                         <div class="description">
                             <div class="desc-txt">
-                                园区构建大学生及青年设计师创意创业中心。下设设计师资源中心，打造时尚微型产业链；辅以工商注册、财税事务、基础办公、资金扶持等公共服务项目进行支持，帮助设计师建立工作室、提供产品展示及售卖空间；同时协助设计师拓展优质产品销售渠道，为其个人品牌进行整体包装和推广。
-                            </div>
-                            <div class="desc-sign">
-                                <i></i>
-                                <span>Young Designers Gathering</span>
+                                园区为青年设计师发展提供全方位的支持。设计师学院组织产业游学和专题讲座使青年 设计师得以进入时尚最前沿的企业、市场和院校与时尚大师和行业专家进行深度交流和
+                                学习；独特的设计大赛与设计训练营配置，使设计师既能获得奖金、创业资源等奖励， 还能让青年设计师在行业专家的指导下得到进一步提高，将设计成果进行市场转化；时
+                                尚俱乐部促进设计师之间的沟通与交流，帮助解决工作中的实际问题。
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="description">
                             <div class="desc-txt">
-                                园区依托北京服装学院，拥有国际化专业权威的时尚设计研发团队。包括国家服装安全研究与检测中心、中小学校服设计研发中心、服装数字化技术研究与推广中心、传统服饰文化传承与设计创新中心、企业文化产品研发中心等，在举全力推动首都时尚产业繁荣发展的同时，为社会各界提供所需的优质服务。
-                            </div>
-                            <div class="desc-sign">
-                                <i></i>
-                                <span>Service Platform for Fashion Industry</span>
+                                北服创新园围绕大学生和青年设计师创新创业构建了专项服务体系，包括帮助设计师建立 个人工作室和开办企业；提供工商注册、财税管理、法律咨询、人才招募等公共服务；设
+                                立设计师资源中心，打造时尚微型产业链；搭建产品展示与销售平台，协助设计师推广品 牌、产品及相关服务等
                             </div>
                         </div>
                         <div class="poster">
                             <img src="./images/about-us_3.png" alt="" />
                             <div class="mask-desc p-center">
-                                <h3>时尚产业服务平台</h3>
-                                <p>Service Platform for Fashion Industry</p>
+                                <h3>创新创业</h3>
+                                <p>Innovation and Entrepreneurship</p>
                             </div>
                         </div>
                     </div>
@@ -143,35 +128,30 @@
                         <div class="poster">
                             <img src="./images/about-us_4.png" alt="" />
                             <div class="mask-desc p-center">
-                                <h3>时尚设计与研发</h3>
-                                <p>Fashion Design and Research</p>
+                                <h3>设计与研发</h3>
+                                <p>Design and Research</p>
                             </div>
                         </div>
                         <div class="description">
                             <div class="desc-txt">
-                                创新园以聚集全球青年时尚创意创新人才为主要内容，建设时尚产业公共服务平台，时尚产品设计师(时装、首饰、配饰及其他)创作及创业孵化基地。包括但不限于设计资源中心、设计师聚集线上平台、设计师推广中心、演出与模特经纪中心、产品研发与品牌运营中心、产品展示展卖中心、服装安全检测中心、平面广告设计中心、传统服饰文化传承中心（传习馆）通过提供专业化的服务，将资本与技术有机的结合起来，为推动北京服装学院产学研一体化建设、提升中关村科技园区自主创新能力、发展时尚创意产业等发挥重要作用。
-                            </div>
-                            <div class="desc-sign">
-                                <i></i>
-                                <span>Fashion Design and Research</span>
+                                北服创新园依托北京服装学院的专业优势和聚集的产业力量，拥有国际化专业权威的设计研 发团队，设立了包括国家服装安全研究与检测中心、中小学校服设计研发中心、服装数字化
+                                技术研究与推广中心、传统服饰文化传承与设计创新中心和企业文化产品研发中心等专门机 构，并参与建设和运营了新中装研究中心和无障碍服装研究中心。
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="description">
                             <div class="desc-txt">
-                                位于中关村时尚产业创新园BIFTPARK一层100号，为设计师提供各种优质面料资源、制版样衣等制作资源，整合设计制衣链条中各个环节的衔接；为面料商、制版师、样衣师、加工商等资源，拓宽市场销售与研发渠道；对接院校科研成果。为更好服务于设计师与各资源商，实现设计资源信息交流的畅通高效，设计资源中心创建网站平台，在这个平台上汇集面料资源和服装制作资源等，设计师们获取这些资源信息都是免费的，我们的愿景是打造助力设计师与品牌成长的时尚产业链。
-                            </div>
-                            <div class="desc-sign">
-                                <i></i>
-                                <span>Design Resource Center</span>
+                                北服创新园自成立以来已经与全球20多个国家的时尚院校、行业协会和知名企业建立了合作 伙伴关系，为中国设计师和企业家开拓视野，学习深造和发展业务提供了有力支持。通过组
+                                织国际性的设计大赛、设计训练营和产业游学等项目，北服创新园在帮助国际青年设计师成 长的同时，还加强了各国青年设计师之间，时尚院校之间，以及他们与中国时尚产业之间的
+                                互动和交流，为国际产业资源进入中国，了解并融入中国时尚发展发挥了积极作用。
                             </div>
                         </div>
                         <div class="poster">
-                            <img src="./images/about-us_5.png" alt="" />
+                            <img src="./images/about-us_2.png" alt="" />
                             <div class="mask-desc p-center">
-                                <h3>设计资源中心</h3>
-                                <p>Design Resource Center</p>
+                                <h3>国际合作与交流</h3>
+                                <p>International Cooperation and Communication</p>
                             </div>
                         </div>
                     </div>
@@ -180,31 +160,40 @@
         </div>
     </main>
     <footer>
-      <div class="top">
-        <h4><a href="http://www.bift.edu.cn" target="_blank">北京服装学院官网</a></h4>
-        <div class="about-us">
-          <h3>联系我们</h3>
-          <div>
-            <div>
-              <p>媒体合作</p>
-              <p>Email:</p>
-              <p style="color: #fff">yueyang@biftpark.com</p>
+        <div class="top">
+            <div class="footer-logo">
+                <div>
+                    <img src="./images/footer-bjfzxy-logo.png" alt="">
+                </div>
+                <div>
+                    <img src="./images/footer-logo.png" alt="">
+                </div>
             </div>
-            <div>
-              <p>业务合作</p>
-              <p style="color: #fff">办公电话 Office Tel: (010)64520943</p>
-              <p>传真号码 Fax: (010) 64520943</p>
-              <p>电子邮箱 E-mail: info@biftpark.com</p>
+            <div class="menu">
+                <p><a href="">加入我们</a></p>
+                <p><a href="">商标声明</a></p>
+                <p><a href="">隐私政策</a></p>
+                <p><a href="">联系方式</a></p>
             </div>
-          </div>
+            <div class="address">
+                <p>北服创新园官方微博：BIFTPARK</p>
+                <p>北服创新园官方微信公众号：中关村时尚产业创新园 BIFTPARK</p>
+            </div>
+            <div class="qr-code">
+                <div>
+                    <img src="./images/footer-code1.png" alt="">
+                </div>
+                <div>
+                    <img src="./images/footer-code2.png" alt="">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="bottom">
-        <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
-        <p>京ICP备18000308号-1</p>
-      </div>
+        <div class="bottom">
+            <p>© 2012 - 2018 北京北服时尚投资管理有限公司</p>
+            <p>京ICP备18000308号-1</p>
+        </div>
     </footer>
-
+    <script src="./js/jquery.min.js"></script>
 </body>
 
 </html>

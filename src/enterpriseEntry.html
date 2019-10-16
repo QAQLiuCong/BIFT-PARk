@@ -231,7 +231,7 @@
     <script>
         $(function () {
             var swiperList = [];
-            $(".l-nav").on("mouseenter mouseleave", "li", function () {
+            $(".l-nav").on("mouseenter", "li", function () {
                 var index = $(this).index();
                 $(this)
                     .addClass("active")

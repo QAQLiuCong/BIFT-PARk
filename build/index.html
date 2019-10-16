@@ -46,10 +46,10 @@
     </ul>
   </header>
   <script>
-  const debounce = function(idle, action) {
-    let last
+  var debounce = function(idle, action) {
+    var last
     return function() {
-      const ctx = this, args = arguments
+      var ctx = this, args = arguments
       clearTimeout(last)
       last = setTimeout(function() {
         action.apply(ctx, args)
@@ -58,7 +58,7 @@
   }
 
   window.addEventListener('scroll', debounce(50, function(e) {
-      let scrollY = 0
+      var scrollY = 0
       if (window.scrollY) {
           scrollY = window.scrollY
       } else {
@@ -69,7 +69,7 @@
       }
       e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
       e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
-      let direction = 'down'
+      var direction = 'down'
       if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
           direction = 'up'
       }
@@ -86,11 +86,11 @@
     <section class="section module1" id="section1">
       <div class="bg"></div>
       <div class="pc-video-page">
+        <div class="fake-nav "></div>
         <div class="video-container">
-          <video width="100%" controls="controls" controlslist="nodownload" id="home-video">
-            <source
-              src="http://vd2.bdstatic.com/mda-ie3t0aftba4umnj4/sc/mda-ie3t0aftba4umnj4.mp4"
-              type="video/mp4"></video>
+          <video width="100%" playsinline webkit-playsinline loop muted="true" preload="none" autoplay controls="controls" controlslist="nodownload" id="home-video">
+            <source src="http://vd2.bdstatic.com/mda-ie3t0aftba4umnj4/sc/mda-ie3t0aftba4umnj4.mp4" type="video/mp4">
+            </video>
         </div>
       </div>
     </section>
@@ -297,17 +297,19 @@
   <script src="./js/lazysizes.min.js"></script>
   <script src="./js/jquery.min.js"></script>
   <script>
-      new fullpage("#home", {
-        css3: true,
-        scrollingSpeed: 700,
-        autoScrolling: true,
-        navigation: true
-      });
-    // window.onload = function() {
-    //   setTimeout(function(){
-    //     document.querySelector('.pc-video-page').style.display = 'block'
-    //   },3000)
-    // }
+    new fullpage("#home", {
+      css3: true,
+      scrollingSpeed: 700,
+      autoScrolling: true,
+      navigation: true,
+      onLeave: function (index, nextIndex, direction) {
+        if (direction === 'down') {
+          $('header').slideUp('fast')
+        } else {
+          $('header').slideDown('fast')
+        }
+      }
+    });
   </script>
 </body>
 

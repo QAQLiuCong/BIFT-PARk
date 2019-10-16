@@ -12,11 +12,13 @@
 
 .module1 .bg { background: url("../images/home_1.png") no-repeat 50% 75%; background-size: cover; }
 
-.module1 .pc-video-page { display: none; position: relative; left: 0; top: 0; height: 100vh; }
+.module1 .pc-video-page { position: relative; left: 0; top: 0; height: 100vh; }
 
-.module1 .pc-video-page .video-container { height: 100%; position: relative; overflow: hidden; }
+.module1 .pc-video-page .video-container { height: 100%; height: calc(100% - 106px); position: relative; overflow: hidden; }
 
 .module1 .pc-video-page .video-container video { width: 100%; height: 100%; object-fit: cover; }
+
+.module1 .pc-video-page .video-container video::-webkit-media-controls { display: none !important; }
 
 .module2 .bg { background: url("../images/home_2.png") no-repeat 50%; background-size: cover; }
 

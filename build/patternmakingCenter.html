@@ -45,10 +45,10 @@
       </ul>
     </header>
     <script>
-    const debounce = function(idle, action) {
-      let last
+    var debounce = function(idle, action) {
+      var last
       return function() {
-        const ctx = this, args = arguments
+        var ctx = this, args = arguments
         clearTimeout(last)
         last = setTimeout(function() {
           action.apply(ctx, args)
@@ -57,7 +57,7 @@
     }
 
     window.addEventListener('scroll', debounce(50, function(e) {
-        let scrollY = 0
+        var scrollY = 0
         if (window.scrollY) {
             scrollY = window.scrollY
         } else {
@@ -68,7 +68,7 @@
         }
         e.target.oldScrollTopPosition = e.target.scrollTopPosition || 0
         e.target.scrollTopPosition = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0
-        let direction = 'down'
+        var direction = 'down'
         if (e.target.scrollTopPosition - e.target.oldScrollTopPosition < 0) {
             direction = 'up'
         }
@@ -149,6 +149,7 @@
     </footer>
 
     <script src="./js/lazysizes.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
 </body>
 
 </html>
